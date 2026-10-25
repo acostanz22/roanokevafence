@@ -86,6 +86,81 @@ h1, h2, h3, .brand span, .band-phone {
   font-weight: 700;
 }
 
+.phone-icon {
+  display: inline-block;
+  vertical-align: -0.15em;
+  margin-right: 0.35rem;
+  flex-shrink: 0;
+}
+
+.phone-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.15rem;
+  color: inherit;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.phone-link strong { font-weight: 800; }
+
+.utility .phone-link { color: #fff; }
+
+.phone-link:hover { color: #f0d2c2; }
+
+.phone-link-lg {
+  font-size: clamp(1.45rem, 3vw, 2rem);
+  color: var(--slate, #1b232c);
+}
+
+.btn-call {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-weight: 750;
+}
+
+.btn-call strong { font-weight: 800; }
+
+.slim-hero .hero-grid {
+  padding: 2rem 0 2.4rem;
+  align-items: start;
+}
+
+.story-balanced { align-items: start; }
+
+.story-balanced img {
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+}
+
+.location-split {
+  display: grid;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.location-split .map-frame {
+  margin: 0;
+  border-radius: 14px;
+  overflow: hidden;
+  min-height: 320px;
+  border: 1px solid var(--line);
+}
+
+.location-split .map-frame iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 360px;
+  border: 0;
+}
+
+.hours-note {
+  margin-top: 0.75rem;
+  font-weight: 650;
+}
+
 .site-header {
   position: sticky;
   top: 0;
@@ -100,6 +175,7 @@ h1, h2, h3, .brand span, .band-phone {
   justify-content: space-between;
   gap: 0.75rem;
   min-height: 4.4rem;
+  min-width: 0;
 }
 
 .brand {
@@ -109,6 +185,7 @@ h1, h2, h3, .brand span, .band-phone {
   color: #fff;
   text-decoration: none;
   min-height: 44px;
+  flex-shrink: 0;
 }
 
 .brand img { width: 46px; height: 46px; }
@@ -239,8 +316,8 @@ body.nav-open .site-nav {
 
 .hero h1, .page-hero h1 {
   margin: 0 0 0.7rem;
-  font-size: clamp(2.15rem, 5vw, 3.5rem);
-  max-width: 16ch;
+  font-size: clamp(2.05rem, 4.6vw, 3.35rem);
+  max-width: 18ch;
 }
 
 .lede { font-size: 1.12rem; max-width: 42rem; margin: 0 0 1.1rem; }
@@ -269,7 +346,9 @@ body.nav-open .site-nav {
 }
 
 .quote-card iframe {
+  display: block;
   width: 100%;
+  max-width: 100%;
   border: 0;
   min-height: 552px;
 }
@@ -314,6 +393,18 @@ body.nav-open .site-nav {
 .service-list, .factor-grid, .split, .place-grid, .steps {
   display: grid;
   gap: 1rem;
+}
+
+.hero-grid > *,
+.contact-grid > *,
+.story > *,
+.band-inner > *,
+.service-list > *,
+.factor-grid > *,
+.place-grid > *,
+.steps > *,
+.quote-card {
+  min-width: 0;
 }
 
 .service-card, .factor, .split article, .place-card, .post-card {
@@ -573,20 +664,25 @@ body.nav-open .site-nav {
 
 .mobile-bar a { min-height: 48px; }
 
+.mobile-bar.is-hidden { visibility: hidden; pointer-events: none; }
+
 @media (min-width: 700px) {
   .service-list, .factor-grid, .steps { grid-template-columns: 1fr 1fr; }
   .story { grid-template-columns: 280px minmax(0, 1fr); }
   .story img { height: 210px; }
   .split, .place-grid, .band-inner, .contact-grid { grid-template-columns: 1fr 1fr; }
-  .footer-grid { grid-template-columns: 1fr 1fr 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr 1fr 1fr; }
+  .location-split { grid-template-columns: minmax(0, 1.05fr) minmax(260px, 0.95fr); }
+  .slim-hero .hero-grid { padding: 2.5rem 0 3rem; }
 }
 
 @media (min-width: 1040px) {
   .service-list { grid-template-columns: repeat(3, 1fr); }
   .factor-grid { grid-template-columns: repeat(4, 1fr); }
   .nav-toggle, .mobile-bar { display: none; }
-  .header-actions { display: flex; gap: 0.5rem; }
+  .header-actions { display: flex; gap: 0.5rem; flex-shrink: 0; }
   .header-actions .btn { font-size: 0.92rem; padding-inline: 0.7rem; }
+  .call-short { display: none; }
   .site-footer { padding-bottom: 2.4rem; }
   body.nav-open .site-nav {
     position: static;
@@ -599,6 +695,7 @@ body.nav-open .site-nav {
     display: block;
     position: static;
     flex: 1;
+    min-width: 0;
     background: transparent;
     padding: 0;
     max-height: none;
@@ -635,6 +732,11 @@ body.nav-open .site-nav {
     padding: 3.4rem 0 3rem;
   }
   .quote-card { margin-top: 0; }
+}
+
+@media (min-width: 1040px) and (max-width: 1180px) {
+  .header-actions .call-long { display: none; }
+  .header-actions .call-short { display: inline; }
 }
 
 @media (prefers-reduced-motion: reduce) {

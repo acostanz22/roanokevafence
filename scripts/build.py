@@ -73,7 +73,7 @@ def other_services(current):
     return [(s["nav"], s["href"]) for s in C.SERVICES if s["href"] != current]
 
 
-FORM = """<iframe data-tally-src="https://tally.so/embed/xX6B0y?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1&source=Roanoke+VA+Fence+Company" loading="lazy" width="100%" height="552" frameborder="0" marginheight="0" marginwidth="0" title="Get a free quote"></iframe>
+FORM = """<iframe data-tally-src="https://tally.so/embed/xX6B0y?alignLeft=1&amp;hideTitle=1&amp;transparentBackground=1&amp;dynamicHeight=1&amp;source=Roanoke+VA+Fence+Company" width="100%" height="552" frameborder="0" marginheight="0" marginwidth="0" title="Get a free quote"></iframe>
 <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach(function(e){e.src=e.dataset.tallySrc});if("undefined"!=typeof Tally)Tally.loadEmbeds()};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}else v();</script>"""
 
 
@@ -146,8 +146,24 @@ def nav(current, estimate):
   </ul>
 </nav>
 <div class="header-actions">
-  <a class="btn btn-ghost" href="tel:{TEL}">Call {PHONE}</a>
+  <a class="btn btn-ghost btn-call" href="tel:{TEL}" aria-label="Call {PHONE}">{PHONE_ICON}<strong><span class="call-long">Call {PHONE}</span><span class="call-short">Call</span></strong></a>
   <a class="btn btn-solid" href="{estimate}">Free estimate</a>
+</div>"""
+
+
+OFFICE_HOURS = "Monday–Sunday: 7:00 AM – 7:00 PM"
+PHONE_ICON = '<svg class="phone-icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.3 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1L6.6 10.8z"/></svg>'
+MAP_SRC = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d101622.894!2d-80.0442!3d37.27097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x884d0e17c5f574c9%3A0x3c9ef7ee322576de!2sRoanoke%2C%20VA!5e0!3m2!1sen!2sus"
+
+
+def phone_link(extra_class=""):
+    cls = "phone-link" + (f" {extra_class}" if extra_class else "")
+    return f'<a class="{cls}" href="tel:{TEL}">{PHONE_ICON}<strong>{PHONE}</strong></a>'
+
+
+def map_embed(title="Roanoke VA Fence Company service area"):
+    return f"""<div class="map-frame">
+  <iframe src="{MAP_SRC}" width="600" height="450" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="{title}"></iframe>
 </div>"""
 
 
@@ -162,7 +178,7 @@ def footer(estimate):
           <li><a href="/about.html">About</a></li>
           <li><a href="/contact.html">Contact</a></li>
           <li><a href="/faq.html">FAQ</a></li>
-          <li><a href="tel:{TEL}">{PHONE}</a></li>
+          <li>{phone_link()}</li>
         </ul>
       </div>
       <div>
@@ -182,12 +198,17 @@ def footer(estimate):
           <li><a href="{estimate}">Request an estimate</a></li>
         </ul>
       </div>
+      <div>
+        <h2>Office Hours</h2>
+        <p>{OFFICE_HOURS}</p>
+        <p>{phone_link()}</p>
+      </div>
     </div>
-    <p class="legal">{NAME}. Roanoke, Virginia. Call <a href="tel:{TEL}">{PHONE}</a>.</p>
+    <p class="legal">{NAME}. Roanoke, Virginia. {phone_link()}</p>
   </div>
 </footer>
 <div class="mobile-bar">
-  <a class="btn btn-ghost" href="tel:{TEL}">Call</a>
+  <a class="btn btn-ghost" href="tel:{TEL}">{PHONE_ICON} Call</a>
   <a class="btn btn-solid" href="{estimate}">Estimate</a>
 </div>"""
 
@@ -282,7 +303,7 @@ def shell(page):
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{page["title"]}</title>
 <meta name="description" content="{page["description"]}">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="{page.get("robots", "index, follow")}">
 <link rel="canonical" href="{page["canonical"]}">
 <meta property="og:site_name" content="{NAME}">
 <meta property="og:title" content="{page["title"]}">
@@ -300,14 +321,14 @@ def shell(page):
 <a class="skip" href="#main">Skip to content</a>
 <div class="utility">
   <div class="wrap utility-inner">
-    <span>Roanoke, Virginia</span>
-    <a href="tel:{TEL}">{PHONE}</a>
+    <span>Roanoke, Virginia · {OFFICE_HOURS}</span>
+    {phone_link()}
   </div>
 </div>
 <header class="site-header">
   <div class="wrap header-inner">
     <a class="brand" href="/">
-      <img src="/images/mark.svg" alt="" width="64" height="64">
+      <img src="/images/mark.svg" alt="Roanoke VA Fence Company logo" width="64" height="64">
       <span>Roanoke VA<small>Fence Company</small></span>
     </a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
@@ -364,44 +385,53 @@ def related_block(current_href):
 
 def build_service(s):
     estimate = "/contact.html#quote"
-    body = f"""{page_hero(crumbs([("Home", "/"), ("Services", "/services.html"), (s["nav"], None)]), s["h1"], s["intro"], estimate)}
+    seo = s.get("seo_sections") or [
+        ("Where this fence fits local lots", s.get("fit") or s["intro"]),
+        ("Materials and styles", "The estimate names the height, style, gate count, and anything on the line that changes the dig: slope, rock, trees, and tear-out. We do not publish a flat price per foot."),
+        ("Repair versus a new run", "Sound posts can take a repair. Posts that have failed at the ground usually mean a new line is the clearer job. We will say which one it is after we see the fence."),
+        ("What an estimate covers", "Length, height, style, gates, post method, access, and removal of any existing fence that has to come out. Call " + PHONE + " or use the form with the town and a rough foot count."),
+    ]
+    seo_html = "".join(f"<h2>{title}</h2>{paras([body] if isinstance(body, str) else body)}" for title, body in seo)
+    body = f"""<section class="hero slim-hero service-hero">
+  <div class="wrap hero-grid">
+    <div>
+      {crumbs([("Home", "/"), ("Services", "/services.html"), (s["nav"], None)])}
+      <p class="eyebrow">{s["nav"]}</p>
+      <h1>{s["h1"]}</h1>
+      <p class="lede">{s["intro"]}</p>
+      {hero_buttons(estimate)}
+    </div>
+    <div class="quote-card" id="quote">
+      <p class="kicker">Free estimate</p>
+      <h2>Get a fence quote</h2>
+      {FORM}
+    </div>
+  </div>
+</section>
 <section class="section">
-  <div class="wrap story">
+  <div class="wrap story story-balanced">
     <img src="{s["image"]}" alt="{s["alt"]}" width="{s["w"]}" height="{s["h"]}" loading="lazy" decoding="async">
     <div>
       <h2>{s["when_h"]}</h2>
       {paras(s["when"])}
+      <p>{phone_link("phone-link-lg")}</p>
     </div>
   </div>
 </section>
 <section class="section section-alt">
-  <div class="wrap">
-    <div class="section-head">
-      <h2>{s["process_h"]}</h2>
-      <p>{s["process_lead"]}</p>
-    </div>
+  <div class="wrap prose service-copy">
+    {seo_html}
+    <h2>{s["process_h"]}</h2>
+    <p>{s["process_lead"]}</p>
     {steps(s["steps"])}
-  </div>
-</section>
-<section class="section">
-  <div class="wrap">
-    <div class="section-head">
-      <h2>{s["cost_h"]}</h2>
-      <p>{s["cost_lead"]}</p>
-    </div>
+    <h2>{s["cost_h"]}</h2>
+    <p>{s["cost_lead"]}</p>
     {factors(s["costs"])}
-  </div>
-</section>
-<section class="section section-alt">
-  <div class="wrap">
-    <div class="section-head">
-      <h2>{s["faq_h"]}</h2>
-    </div>
+    <h2>{s["faq_h"]}</h2>
     {faq_block(s["faqs"])}
   </div>
 </section>
-{related_block(s["href"])}
-{cta("Get a fence estimate", "Call " + PHONE + " or send the form. Name the material, the town, about how many feet, and the gates. Estimates are free, and the price comes after we see the line.")}"""
+{related_block(s["href"])}"""
     return {
         "path": s["href"],
         "title": s["title"],
@@ -418,37 +448,40 @@ def build_place(p):
     if "h1" not in p:
         return None
     estimate = "/contact.html#quote"
-    body = f"""{page_hero(crumbs([("Home", "/"), ("Service areas", "/service-areas.html"), (p["name"], None)]), p["h1"], p["intro"], estimate)}
-<section class="section">
-  <div class="wrap story">
-    <img src="{p["image"]}" alt="{p["alt"]}" width="{p["w"]}" height="{p["h"]}" loading="lazy" decoding="async">
+    body = f"""<section class="hero slim-hero location-hero">
+  <div class="wrap hero-grid">
     <div>
-      <h2>{p["when_h"]}</h2>
-      {paras(p["when"])}
+      {crumbs([("Home", "/"), ("Service areas", "/service-areas.html"), (p["name"], None)])}
+      <p class="eyebrow">Service area</p>
+      <h1>{p["h1"]}</h1>
+      <p class="lede">{p["intro"]}</p>
+      {hero_buttons(estimate)}
+    </div>
+    <div class="quote-card" id="quote">
+      <p class="kicker">Free estimate</p>
+      <h2>Get a fence quote</h2>
+      {FORM}
     </div>
   </div>
 </section>
-<section class="section section-alt">
-  <div class="wrap prose">
-    <h2>{p["more_h"]}</h2>
-    {paras(p["more"])}
-  </div>
-</section>
 <section class="section">
-  <div class="wrap">
-    <h2>Fence services</h2>
-    {chips([(s["nav"], s["href"]) for s in C.SERVICES])}
-    <h2>Other places</h2>
-    {chips([(o["name"], o["href"]) for o in C.PLACES if o["href"] != p["href"]])}
+  <div class="wrap location-split">
+    <div class="prose">
+      <h2>{p["when_h"]}</h2>
+      {paras(p["when"])}
+      <h2>{p["more_h"]}</h2>
+      {paras(p["more"])}
+      <h2>Fence services</h2>
+      {chips([(s["nav"], s["href"]) for s in C.SERVICES])}
+      <h2>Other places</h2>
+      {chips([(o["name"], o["href"]) for o in C.PLACES if o["href"] != p["href"]])}
+      <h2>Questions about fencing in {p["name"].replace(", VA", "")}</h2>
+      {faq_block(p["faqs"])}
+      <p>{phone_link("phone-link-lg")}</p>
+    </div>
+    {map_embed("Fence service area map for " + p["name"])}
   </div>
-</section>
-<section class="section section-alt">
-  <div class="wrap">
-    <div class="section-head"><h2>Questions about fencing in {p["name"].replace(", VA", "")}</h2></div>
-    {faq_block(p["faqs"])}
-  </div>
-</section>
-{cta("Estimate a fence in " + p["name"].replace(", VA", ""), "Tell us the town is " + p["name"] + ", the material, the rough length, and the gates. We will look at the line before we give you a number.")}"""
+</section>"""
     return {
         "path": p["href"],
         "title": p["title"],
@@ -542,7 +575,18 @@ def build_home():
     {faq_block(C.HOME_FAQS)}
   </div>
 </section>
-{cta("Call for a fence estimate", "Call " + PHONE + " or send the form. Tell us the town, the material, and about how many feet. Estimates are free.")}"""
+<section class="section locations-band">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="kicker">Service area</p>
+      <h2>Towns we fence</h2>
+      <p>Wood, vinyl, chain-link, aluminum, farm, and commercial fencing in these Roanoke-area towns.</p>
+    </div>
+    {chips(place_links())}
+    <p><a class="details" href="/service-areas.html">All service areas</a> · {phone_link()}</p>
+    <p class="hours-note">{OFFICE_HOURS}</p>
+  </div>
+</section>"""
     return {
         "path": "/",
         "title": "Fence Company in Roanoke, VA | Installation and Repair",
@@ -857,7 +901,60 @@ def main():
         "User-agent: *\nAllow: /\n\nSitemap: https://www.roanokevafence.net/sitemap.xml\n",
         encoding="utf-8",
     )
-    (ROOT / "_redirects").write_text("/index.html / 301\n", encoding="utf-8")
+    (ROOT / "_redirects").write_text(
+        "\n".join(
+            [
+                "/index.html / 301",
+                "/favicon.ico /images/mark.svg 200",
+                "/wood-fence.html /landscape-lighting-installation.html 301",
+                "/privacy-fence.html /vinyl-fence.html 301",
+                "/blog /blog.html 301",
+                "/blog/ /blog.html 301",
+                "/blog/the-benefits-of-hiring-professional-fence-contractors/ /blog/the-benefits-of-hiring-professional-fence-contractors 301",
+                "/blog/the-benefits-of-hiring-professional-fence-contractors /blog/the-benefits-of-hiring-professional-fence-contractors/index.html 200",
+                "",
+            ]
+        ),
+        encoding="utf-8",
+    )
+    (ROOT / "blog" / "index.html").write_text(
+        """<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Fence Notes | Roanoke VA Fence Company</title>
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://www.roanokevafence.net/blog.html">
+<meta http-equiv="refresh" content="0; url=/blog.html">
+</head>
+<body>
+<p><a href="/blog.html">Fence notes</a></p>
+<script>location.replace("/blog.html");</script>
+</body>
+</html>
+""",
+        encoding="utf-8",
+    )
+    missing = {
+        "path": "/404.html",
+        "title": "Page not found | Roanoke VA Fence Company",
+        "description": "That address is not a page on Roanoke VA Fence Company. Call (540) 234-2867 or go back to the fence services.",
+        "canonical": HOST + "/404.html",
+        "robots": "noindex, follow",
+        "crumbs": [("Home", "/"), ("Page not found", None)],
+        "body": """<section class="page-hero">
+  <div class="wrap">
+    <ol class="crumbs"><li><a href="/">Home</a></li><li>Page not found</li></ol>
+    <h1>That page is not on this site</h1>
+    <p>The address does not match a fence page. The services list and the contact form are the way back.</p>
+    <div class="hero-actions">
+      <a class="btn btn-solid" href="/services.html">View services</a>
+      <a class="btn btn-ghost" href="tel:+15402342867">Call (540) 234-2867</a>
+    </div>
+  </div>
+</section>""",
+    }
+    write_page(missing)
     problems = audit(pages)
     print(f"Wrote {len(pages)} pages")
     if problems:
