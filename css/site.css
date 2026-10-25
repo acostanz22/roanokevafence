@@ -641,6 +641,22 @@ body.nav-open .site-nav {
 
 .site-footer li { margin: 0.28rem 0; }
 
+.hours-list {
+  display: grid;
+  gap: 0.35rem;
+  margin: 0.55rem 0 0;
+  color: rgba(244, 241, 234, 0.86);
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+.hours-list > div {
+  display: grid;
+  grid-template-columns: minmax(6.5rem, auto) 1fr;
+  column-gap: 1.25rem;
+  align-items: baseline;
+}
+
 .legal {
   margin-top: 1.5rem;
   padding-top: 1rem;

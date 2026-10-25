@@ -151,7 +151,17 @@ def nav(current, estimate):
 </div>"""
 
 
-OFFICE_HOURS = "Monday–Sunday: 7:00 AM – 7:00 PM"
+OFFICE_HOURS = "Monday–Sunday: 7 am – 7 pm"
+OFFICE_HOURS_DAYS = (
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday",
+)
+OFFICE_HOURS_TIME = "7 am – 7 pm"
 PHONE_ICON = '<svg class="phone-icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.3 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1L6.6 10.8z"/></svg>'
 MAP_SRC = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d101622.894!2d-80.0442!3d37.27097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x884d0e17c5f574c9%3A0x3c9ef7ee322576de!2sRoanoke%2C%20VA!5e0!3m2!1sen!2sus"
 
@@ -159,6 +169,14 @@ MAP_SRC = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d101622.894!2d-8
 def phone_link(extra_class=""):
     cls = "phone-link" + (f" {extra_class}" if extra_class else "")
     return f'<a class="{cls}" href="tel:{TEL}">{PHONE_ICON}<strong>{PHONE}</strong></a>'
+
+
+def office_hours_block():
+    rows = "".join(
+        f"<div><span>{day}</span><span>{OFFICE_HOURS_TIME}</span></div>"
+        for day in OFFICE_HOURS_DAYS
+    )
+    return f'<div class="hours-list">{rows}</div>'
 
 
 def map_embed(title="Roanoke VA Fence Company service area"):
@@ -200,8 +218,7 @@ def footer(estimate):
       </div>
       <div>
         <h2>Office Hours</h2>
-        <p>{OFFICE_HOURS}</p>
-        <p>{phone_link()}</p>
+        {office_hours_block()}
       </div>
     </div>
     <p class="legal">{NAME}. Roanoke, Virginia. {phone_link()}</p>
