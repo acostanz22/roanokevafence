@@ -400,6 +400,21 @@ def related_block(current_href):
 </section>"""
 
 
+def service_gallery(primary, others):
+    shots = [
+        f'<figure class="service-shot"><img src="{primary["image"]}" alt="{primary["alt"]}" width="{primary["w"]}" height="{primary["h"]}" loading="lazy" decoding="async"></figure>'
+    ]
+    for o in others:
+        if o["href"] == primary["href"]:
+            continue
+        shots.append(
+            f'<figure class="service-shot"><img src="{o["image"]}" alt="{o["alt"]}" width="{o["w"]}" height="{o["h"]}" loading="lazy" decoding="async"></figure>'
+        )
+        if len(shots) >= 2:
+            break
+    return f'<div class="service-gallery">{"".join(shots)}</div>'
+
+
 def build_service(s):
     estimate = "/contact.html#quote"
     seo = s.get("seo_sections") or [
@@ -409,46 +424,57 @@ def build_service(s):
         ("What an estimate covers", "Length, height, style, gates, post method, access, and removal of any existing fence that has to come out. Call " + PHONE + " or use the form with the town and a rough foot count."),
     ]
     seo_html = "".join(f"<h2>{title}</h2>{paras([body] if isinstance(body, str) else body)}" for title, body in seo)
-    body = f"""<section class="hero slim-hero service-hero">
-  <div class="wrap hero-grid">
-    <div>
-      {crumbs([("Home", "/"), ("Services", "/services.html"), (s["nav"], None)])}
-      <p class="eyebrow">{s["nav"]}</p>
-      <h1>{s["h1"]}</h1>
-      <p class="lede">{s["intro"]}</p>
-      {hero_buttons(estimate)}
-    </div>
-    <div class="quote-card" id="quote">
-      <p class="kicker">Free estimate</p>
-      <h2>Get a fence quote</h2>
-      {FORM}
-    </div>
+    related = "".join(f'<li><a href="{href}">{label}</a></li>' for label, href in other_services(s["href"])[:4])
+    towns = chips(place_links())
+    body = f"""<div class="crumb-bar"><div class="wrap">{crumbs([("Home", "/"), ("Services", "/services.html"), (s["nav"], None)])}</div></div>
+<section class="hero slim-hero service-hero">
+  <div class="wrap service-hero-inner">
+    <p class="eyebrow">{s["nav"]}</p>
+    <h1>{s["h1"]}</h1>
+    <p class="lede">{s["intro"]}</p>
+    {hero_buttons(estimate)}
   </div>
 </section>
-<section class="section">
-  <div class="wrap story story-balanced">
-    <img src="{s["image"]}" alt="{s["alt"]}" width="{s["w"]}" height="{s["h"]}" loading="lazy" decoding="async">
-    <div>
-      <h2>{s["when_h"]}</h2>
-      {paras(s["when"])}
-      <p>{phone_link("phone-link-lg")}</p>
+<section class="section service-body">
+  <div class="wrap service-layout">
+    <div class="service-main">
+      {service_gallery(s, C.SERVICES)}
+      <div class="prose service-copy">
+        <h2>{s["when_h"]}</h2>
+        {paras(s["when"])}
+        {seo_html}
+        <h2>{s["process_h"]}</h2>
+        <p>{s["process_lead"]}</p>
+        {steps(s["steps"])}
+        <h2>{s["cost_h"]}</h2>
+        <p>{s["cost_lead"]}</p>
+        {factors(s["costs"])}
+        <h2>{s["faq_h"]}</h2>
+        {faq_block(s["faqs"])}
+      </div>
     </div>
+    <aside class="service-aside" aria-label="Estimate and related services">
+      <div class="side-card" id="quote">
+        <p class="side-kicker">Talk through the line</p>
+        <p>Call or send the lot details. We will tell you if the job is a repair, a replacement, or a different material than you started with.</p>
+        <p class="side-phone">{phone_link("phone-link-lg")}</p>
+        <p class="side-hours">{OFFICE_HOURS}</p>
+        <p><a class="btn btn-solid" href="{estimate}">Estimate form</a></p>
+      </div>
+      <div class="side-card side-card-muted">
+        <p class="side-kicker">Related</p>
+        <ul class="side-links">{related}</ul>
+      </div>
+    </aside>
   </div>
 </section>
-<section class="section section-alt">
-  <div class="wrap prose service-copy">
-    {seo_html}
-    <h2>{s["process_h"]}</h2>
-    <p>{s["process_lead"]}</p>
-    {steps(s["steps"])}
-    <h2>{s["cost_h"]}</h2>
-    <p>{s["cost_lead"]}</p>
-    {factors(s["costs"])}
-    <h2>{s["faq_h"]}</h2>
-    {faq_block(s["faqs"])}
+<section class="section section-towns" style="padding-top:0">
+  <div class="wrap">
+    <h2>Towns we serve</h2>
+    {towns}
+    <p><a class="details" href="/service-areas.html">Service area</a> · <a class="details" href="{estimate}">Request an estimate</a> · <a class="details" href="/services.html">All services</a></p>
   </div>
-</section>
-{related_block(s["href"])}"""
+</section>"""
     return {
         "path": s["href"],
         "title": s["title"],
