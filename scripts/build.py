@@ -331,8 +331,11 @@ def shell(page):
 <meta property="og:url" content="{page["canonical"]}">
 <meta property="og:type" content="website">
 <meta property="og:image" content="{OG}">
-<meta name="theme-color" content="#1b232c">
+<meta name="theme-color" content="#143024">
 <link rel="icon" href="/images/mark.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/css/site.css">
 <script>document.documentElement.classList.remove("no-js");</script>
 <script type="application/ld+json">{ld}</script>
@@ -535,7 +538,7 @@ def build_service(s):
     body = f"""<div class="crumb-bar"><div class="wrap">{crumbs([("Home", "/"), ("Services", "/services.html"), (s["nav"], None)])}</div></div>
 <section class="hero service-hero">
   <div class="wrap hero-grid">
-    <div>
+    <div class="hero-copy">
       <p class="eyebrow">{s["nav"]}</p>
       <h1>{s["h1"]}</h1>
       {intro_html}
@@ -577,19 +580,18 @@ def build_service(s):
 def build_place(p):
     if "h1" not in p:
         return None
-    estimate = "/contact.html#quote"
     body = f"""<section class="hero slim-hero location-hero">
   <div class="wrap hero-grid">
-    <div>
+    <div class="hero-copy">
       {crumbs([("Home", "/"), ("Service areas", "/service-areas.html"), (p["name"], None)])}
       <p class="eyebrow">Service area</p>
       <h1>{p["h1"]}</h1>
       <p class="lede">{p["intro"]}</p>
-      {hero_buttons(estimate)}
+      {hero_buttons("#quote")}
     </div>
     <div class="quote-card" id="quote">
       <p class="kicker">Free estimate</p>
-      <h2>Get a fence quote</h2>
+      <h2>Request a Free Estimate</h2>
       {FORM}
     </div>
   </div>
@@ -626,7 +628,7 @@ def build_place(p):
 def build_home():
     body = f"""<section class="hero">
   <div class="wrap hero-grid">
-    <div>
+    <div class="hero-copy">
       <p class="eyebrow">Professional Fence Installation &amp; Repair</p>
       <h1>Fence Company in Roanoke, VA</h1>
       <p class="lede">At Roanoke VA Fence Company, we help homeowners and businesses enhance their property's privacy, security, and curb appeal with quality fencing solutions. Whether you're looking for a backyard privacy fence, a secure space for your pets, or durable fencing for your commercial property, we offer a variety of styles and materials to fit your needs and budget.</p>
