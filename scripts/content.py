@@ -7,24 +7,28 @@ NAME = "Roanoke VA Fence Company"
 
 HOME_FAQS = [
     (
-        "How much does a fence cost in Roanoke?",
-        "A fence is priced by the foot, and that foot price changes with the material, the height, and the style. The same length costs more when the yard slopes, when posts hit rock or roots, when the crew cannot drive to the line, or when you add gates. We do not publish a flat rate. A level vinyl run and a long farm line on a hill are different jobs, so the number comes after we see the layout.",
+        "How much does fence installation cost in Roanoke, VA?",
+        "Fence installation costs depend on the material, fence height, total length, number of gates, and property conditions. Sloped or rocky terrain can also affect installation costs. Contact us for an estimate based on your specific project.",
     ),
     (
-        "Can you repair a fence, or do you only install new ones?",
-        "We repair fences and we install new ones. A repair makes sense when the posts are still sound and the damage is a few boards, a gate, or a stretched section of chain link. If the posts are rotten at the ground or the line leans for most of its length, replacement is usually the clearer job. We will tell you which one it is after we see the fence.",
+        "What is the best fencing material for my backyard?",
+        "Wood and vinyl are popular choices for privacy. Aluminum offers an attractive, open design, while chain-link provides an economical option for enclosing yards and pet areas. The best material depends on your goals, budget, and maintenance preferences.",
     ),
     (
-        "Do you offer vinyl, wood, chain link, aluminum, and farm fencing?",
-        "Yes. House jobs are usually vinyl or wood privacy, picket, chain link, or aluminum, including fences around pools. Longer properties get split rail, horse fence, and cattle fence. Commercial jobs use chain link, ornamental metal, and gates. Each of those has its own page so you can see what the build actually includes.",
+        "Can fencing be installed on a sloped yard?",
+        "Yes. Fencing can often be installed on sloped properties using installation methods appropriate for the terrain and fencing material. The slope and layout will help determine the best approach.",
     ),
     (
-        "Do I need a permit to put up a fence in Roanoke?",
-        "Roanoke city, Salem, Vinton, and Roanoke County do not share one fence rule. Height, a front yard, and a corner lot can change what that locality allows. We do not print a permit threshold on this site, because the parcel decides it. Name the place when you request the estimate, and check with the locality that covers the property before posts go in.",
+        "Do I need a permit to install a fence in Roanoke?",
+        "Fence requirements vary depending on your municipality, fence height, and property location. Check with the appropriate local authority before installation to confirm applicable rules.",
     ),
     (
-        "Can you install a fence on a slope or rocky lot?",
-        "Yes. A lot of yards here drop from the house toward the rear line, and posts can hit clay, rock, or roots. The layout is the second thing we ask about after the length, because it changes post depth, how the fence steps, and whether a gate will swing. A panel built for flat ground will gap or bind if it is forced onto a hill.",
+        "How long does fence installation take?",
+        "Installation time depends on the size of the project, materials, weather, ground conditions, and scheduling. Smaller residential projects may take only a few days once work begins, while larger or more complicated installations can take longer.",
+    ),
+    (
+        "Do you offer fence repairs?",
+        "Fence repair options depend on the condition of the existing fence. Damaged panels, gates, and certain sections may be repairable, while extensive structural damage may make replacement a better choice.",
     ),
 ]
 
@@ -32,7 +36,7 @@ SERVICES = [
     {
         "href": "/vinyl-fence.html",
         "nav": "Vinyl Fence",
-        "card": "Privacy, picket, and ranch-rail vinyl for a yard that should not need stain. A privacy panel looks finished on both sides.",
+        "card": "Enjoy a clean, attractive fence with minimal maintenance. Vinyl fencing is a popular choice for privacy, property boundaries, and decorative applications.",
         "image": "/images/vinyl-privacy.jpg",
         "w": 1100,
         "h": 619,
@@ -76,7 +80,7 @@ SERVICES = [
     {
         "href": "/landscape-lighting-installation.html",
         "nav": "Wood Fence",
-        "card": "Privacy, picket, and dog-ear wood built to the height of the yard. Footage, style, and the slope are what move the price.",
+        "card": "Add privacy, character, and natural beauty to your property with a custom wood fence. Choose from privacy, picket, and other popular styles.",
         "image": "/images/wood-privacy.jpg",
         "w": 1100,
         "h": 619,
@@ -120,7 +124,7 @@ SERVICES = [
     {
         "href": "/chain-link-fence.html",
         "nav": "Chain-link Fence",
-        "card": "Galvanized or color-coated chain link for a yard, a dog run, or a work lot. Length and the gates set most of the price.",
+        "card": "An affordable, practical option for securing backyards, pet enclosures, businesses, and commercial properties.",
         "image": "/images/chain-link.jpg",
         "w": 1100,
         "h": 619,
@@ -164,7 +168,7 @@ SERVICES = [
     {
         "href": "/aluminum-fence.html",
         "nav": "Aluminum Fence",
-        "card": "An open metal fence that keeps the view, and a usual choice around a pool. It follows a slope more easily than a tall privacy panel.",
+        "card": "Enhance your property's appearance with attractive, low-maintenance aluminum fencing that provides security without blocking your view.",
         "image": "/images/aluminum-fence.jpg",
         "w": 487,
         "h": 274,
@@ -208,7 +212,7 @@ SERVICES = [
     {
         "href": "/farm-fencing.html",
         "nav": "Farm Fence",
-        "card": "Split rail, horse fence, and cattle fence for longer lines around Roanoke. The animal, the gates, and the ground decide the build.",
+        "card": "Practical fencing solutions for farms, livestock, and larger rural properties, including split-rail and agricultural fencing.",
         "image": "/images/farm-rail.jpg",
         "w": 1100,
         "h": 619,
@@ -252,7 +256,7 @@ SERVICES = [
     {
         "href": "/commercial-fencing.html",
         "nav": "Commercial Fencing",
-        "card": "Chain link, ornamental metal, and gates for lots, yards, and job sites. A commercial line is specified apart from a backyard fence.",
+        "card": "Protect your business, equipment, and property with commercial fencing solutions designed for security and access control.",
         "image": "/images/ornamental-fence.jpg",
         "w": 542,
         "h": 305,

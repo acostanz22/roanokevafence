@@ -537,22 +537,18 @@ def build_place(p):
 
 
 def build_home():
-    links = ", ".join(f'<a href="{s["href"]}">{s["nav"].lower()}</a>' for s in C.SERVICES)
-    # fix grammar: last "and"
-    parts = [f'<a href="{s["href"]}">{s["nav"].lower()}</a>' for s in C.SERVICES]
-    inline = ", ".join(parts[:-1]) + ", and " + parts[-1]
     body = f"""<section class="hero">
   <div class="wrap hero-grid">
     <div>
-      <p class="eyebrow">Roanoke, Virginia</p>
+      <p class="eyebrow">Professional Fence Installation &amp; Repair</p>
       <h1>Fence Company in Roanoke, VA</h1>
-      <p class="lede">Roanoke VA Fence Company installs and repairs fences for houses, businesses, and farms in Roanoke and the towns around it. The price follows the length of the line, the material, the gates, and what the ground does between the posts.</p>
+      <p class="lede">At Roanoke VA Fence Company, we help homeowners and businesses enhance their property's privacy, security, and curb appeal with quality fencing solutions. Whether you're looking for a backyard privacy fence, a secure space for your pets, or durable fencing for your commercial property, we offer a variety of styles and materials to fit your needs and budget.</p>
+      <p>From wood and vinyl to aluminum and chain-link fencing, we make it easy to find the right solution for your property. Our goal is to provide dependable service, quality workmanship, and a straightforward experience from your initial estimate to the completed installation.</p>
       {hero_buttons("/#quote")}
-      <p class="hero-links">Services: {inline}.</p>
     </div>
     <div class="quote-card" id="quote">
       <p class="kicker">Free estimate</p>
-      <h2>Get a fence quote</h2>
+      <h2>Request a Free Estimate</h2>
       {FORM}
     </div>
   </div>
@@ -562,7 +558,7 @@ def build_home():
     <div class="section-head">
       <p class="kicker">Our services</p>
       <h2>Fence services</h2>
-      <p>Each card goes to its own page. The short description is the job, not a slogan.</p>
+      <p>Not sure which fence is right for you? Call us to discuss your options.</p>
     </div>
     {service_cards()}
   </div>
@@ -570,70 +566,94 @@ def build_home():
 <section class="section section-alt">
   <div class="wrap">
     <div class="section-head">
-      <h2>Houses, businesses, and farms</h2>
+      <h2>Why Choose Roanoke VA Fence Company?</h2>
+      <p>Installing a fence is an investment in your property's privacy, security, and appearance. We want to make choosing the right fencing solution as straightforward as possible.</p>
     </div>
-    <div class="split">
-      <article>
-        <h3>Homes</h3>
-        <p>Most house jobs are a backyard privacy fence in <a href="/landscape-lighting-installation.html">wood</a> or <a href="/vinyl-fence.html">vinyl</a>, a picket or <a href="/aluminum-fence.html">aluminum</a> front line, or <a href="/chain-link-fence.html">chain link</a> for a dog or a side yard.</p>
-        <p>A repair is the right job when the posts are still sound. When the posts have failed at the ground, replacing the run is usually clearer than patching boards onto a lean.</p>
-      </article>
-      <article>
-        <h3>Businesses and farms</h3>
-        <p><a href="/commercial-fencing.html">Commercial lines</a> are chain link, ornamental metal, and gates for parking lots, storage yards, and job sites. The pipe and the openings are specified for that traffic.</p>
-        <p><a href="/farm-fencing.html">Farm lines</a> are longer: split rail, horse fence, and cattle fence, with a gate wide enough for a truck. Those are different products from a privacy panel.</p>
-      </article>
-    </div>
+    {factors([
+        ("Fencing Options for Every Property", "From traditional wood privacy fences to decorative aluminum and commercial chain-link fencing, we help you explore options that fit your needs."),
+        ("Clear, Personalized Estimates", "Every property is different. Fence length, materials, gates, terrain, and installation requirements all affect pricing. We provide estimates based on your specific project rather than relying on one-size-fits-all pricing."),
+        ("Solutions for Roanoke Properties", "Roanoke's hills, uneven yards, and rocky terrain can create challenges during fence installation. Proper planning helps determine the right layout and materials for your property."),
+        ("Residential & Commercial Services", "Whether you're fencing a small backyard, a large property, or a commercial facility, we can help you explore the appropriate solution."),
+    ])}
   </div>
 </section>
 <section class="section">
-  <div class="wrap">
-    <div class="section-head">
-      <h2>What we ask before we price a fence</h2>
-      <p>These are the facts that decide the estimate. We would rather ask them up front than invent a rate per foot.</p>
-    </div>
-    {factors([
-        ("How many feet", "The length is the first number. A rough measurement is enough to start, as long as it includes the corners."),
-        ("The layout", "Level, slope, trees, roots, rock, and whether the truck can reach the line. Two of those can matter more than the style."),
-        ("Style and gates", "Privacy, picket, chain link, aluminum, or farm fence, plus every gate. The style is the third piece of the price."),
-        ("Repair or replace", "Sound posts can take a repair. A line that leans, or posts that are soft at the soil, is usually a new run."),
-    ])}
+  <div class="wrap prose">
+    <h2>Fence Installation for Roanoke's Unique Terrain</h2>
+    <p>Not every yard in the Roanoke Valley is flat.</p>
+    <p>Sloped properties, rocky soil, tree roots, and uneven ground can all influence fence installation. Choosing the right fence style and layout is especially important for properties with significant elevation changes.</p>
+    <p>Wood, vinyl, chain-link, and aluminum fencing each have different advantages depending on your property's terrain and intended use.</p>
+    <p>We can discuss these considerations during the estimate process to help you understand your options.</p>
   </div>
 </section>
 <section class="section section-alt">
   <div class="wrap">
     <div class="section-head">
-      <h2>Service area</h2>
-      <p>We work in Roanoke and the surrounding towns. Lot size and the fence job change from one place to the next. The <a href="/service-areas.html">service area page</a> has the detail, without a list of every neighborhood.</p>
+      <h2>Our Simple Fence Estimate Process</h2>
     </div>
-    {chips(place_links())}
+    {steps([
+        ("Request Your Free Estimate", "Call us or complete our online form. Tell us what type of fence you're considering and where your property is located."),
+        ("Discuss Your Project", "We'll review your fencing needs, preferred materials, approximate measurements, and any property-specific considerations."),
+        ("Review Your Options", "Receive information about your fencing options and the next steps for moving forward with your project."),
+    ])}
+    <p style="margin-top:1.2rem">Ready to get started? {phone_link("phone-link-lg")}</p>
   </div>
 </section>
 <section class="section">
   <div class="wrap">
     <div class="section-head">
-      <h2>Fence questions</h2>
-      <p>Short answers. Material-specific questions live on each service page, and the full set is on the <a href="/faq.html">FAQ</a>.</p>
+      <h2>Residential &amp; Commercial Fence Installation</h2>
+    </div>
+    <div class="split">
+      <article>
+        <h3>Residential Fencing</h3>
+        <p>Create a more private backyard, establish property boundaries, or provide a secure outdoor space for your pets and family.</p>
+        <p>Popular options include <a href="/landscape-lighting-installation.html">wood privacy fencing</a>, <a href="/vinyl-fence.html">vinyl fencing</a>, <a href="/aluminum-fence.html">aluminum fencing</a>, and <a href="/chain-link-fence.html">chain-link fencing</a>.</p>
+      </article>
+      <article>
+        <h3>Commercial Fencing</h3>
+        <p>Secure your commercial property with fencing designed for practical access control and defined boundaries.</p>
+        <p>Options include <a href="/commercial-fencing.html">commercial chain-link fencing</a>, ornamental metal fencing, and gates.</p>
+      </article>
+    </div>
+  </div>
+</section>
+<section class="section section-alt">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Fence Installation in Roanoke &amp; Surrounding Areas</h2>
+      <p>Roanoke VA Fence Company serves customers throughout the Roanoke Valley, including:</p>
+    </div>
+    {chips(place_links())}
+    <p>Whether you're planning a new fence installation or need an existing fence repaired, contact us to discuss your project.</p>
+    <p><a class="details" href="/service-areas.html">All service areas</a> · {phone_link()}</p>
+  </div>
+</section>
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Frequently Asked Questions</h2>
     </div>
     {faq_block(C.HOME_FAQS)}
   </div>
 </section>
-<section class="section locations-band">
-  <div class="wrap">
-    <div class="section-head">
-      <p class="kicker">Service area</p>
-      <h2>Towns we fence</h2>
-      <p>Wood, vinyl, chain-link, aluminum, farm, and commercial fencing in these Roanoke-area towns.</p>
+<section class="band">
+  <div class="wrap band-inner">
+    <div>
+      <h2>Get a Free Fence Estimate in Roanoke, VA</h2>
+      <p>Ready to improve your property's privacy, security, or curb appeal?</p>
+      <p>Whether you're planning a new fence or need help with an existing one, contact Roanoke VA Fence Company to discuss your project.</p>
     </div>
-    {chips(place_links())}
-    <p><a class="details" href="/service-areas.html">All service areas</a> · {phone_link()}</p>
-    <p class="hours-note">{OFFICE_HOURS}</p>
+    <div class="band-panel">
+      <a class="band-phone" href="tel:{TEL}">{PHONE}</a>
+      <a class="btn btn-solid" href="/#quote">Request Your Free Fence Estimate</a>
+    </div>
   </div>
 </section>"""
     return {
         "path": "/",
         "title": "Fence Company in Roanoke, VA | Installation and Repair",
-        "description": "Wood, vinyl, chain-link, aluminum, and farm fence installation and repair in Roanoke, VA. Call (540) 234-2867 for a free estimate.",
+        "description": "Professional fence installation and repair in Roanoke, VA. Wood, vinyl, aluminum, and chain-link fencing. Call (540) 234-2867 for a free estimate.",
         "canonical": HOST + "/",
         "crumbs": [("Home", None)],
         "faqs": C.HOME_FAQS,
@@ -745,7 +765,7 @@ def build_contact():
 
 
 def build_faq():
-    body = f"""{page_hero(crumbs([("Home", "/"), ("FAQ", None)]), "Fence Questions", "Five questions we hear before a fence estimate in Roanoke. For a specific material, use the questions at the bottom of that service page.", "/contact.html#quote")}
+    body = f"""{page_hero(crumbs([("Home", "/"), ("FAQ", None)]), "Fence Questions", "Common questions before a fence estimate in Roanoke. For a specific material, use the questions at the bottom of that service page.", "/contact.html#quote")}
 <section class="section">
   <div class="wrap">
     {faq_block(C.HOME_FAQS)}
