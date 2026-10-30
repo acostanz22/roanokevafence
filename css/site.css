@@ -415,8 +415,8 @@ body.nav-open .site-nav {
 
 .hero {
   background:
-    linear-gradient(105deg, rgba(12, 32, 24, 0.92) 0%, rgba(12, 32, 24, 0.72) 42%, rgba(12, 32, 24, 0.38) 100%),
-    url("/images/hero-fence.png") right 35% / cover no-repeat;
+    linear-gradient(105deg, rgba(12, 32, 24, 0.9) 0%, rgba(12, 32, 24, 0.7) 44%, rgba(12, 32, 24, 0.35) 100%),
+    url("/images/hero-fence.jpg") center 42% / cover no-repeat;
   color: #ecf4ef;
   min-height: 28rem;
 }
@@ -720,7 +720,7 @@ body.nav-open .site-nav {
 .band {
   background:
     linear-gradient(90deg, rgba(12, 32, 24, 0.94), rgba(12, 32, 24, 0.78)),
-    url("/images/hero-fence.png") center 40% / cover no-repeat;
+    url("/images/hero-fence.jpg") center 42% / cover no-repeat;
   color: #ecf4ef;
 }
 
