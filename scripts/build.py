@@ -309,9 +309,12 @@ def graph(page):
 
 
 def shell(page):
-    estimate = "/contact.html#quote" if page["path"] != "/" else "/#quote"
-    if page["path"] == "/contact.html":
+    if page["path"] == "/":
+        estimate = "/#quote"
+    elif page["path"] == "/contact.html" or page.get("service_name"):
         estimate = "#quote"
+    else:
+        estimate = "/contact.html#quote"
     ld = graph(page)
     return f"""<!DOCTYPE html>
 <html class="no-js" lang="en">
@@ -415,64 +418,148 @@ def service_gallery(primary, others):
     return f'<div class="service-gallery">{"".join(shots)}</div>'
 
 
+def bullet_list(items):
+    return "<ul>\n" + "\n".join(f"<li>{item}</li>" for item in items) + "\n</ul>"
+
+
 def build_service(s):
-    estimate = "/contact.html#quote"
-    seo = s.get("seo_sections") or [
-        ("Where this fence fits local lots", s.get("fit") or s["intro"]),
-        ("Materials and styles", "The estimate names the height, style, gate count, and anything on the line that changes the dig: slope, rock, trees, and tear-out. We do not publish a flat price per foot."),
-        ("Repair versus a new run", "Sound posts can take a repair. Posts that have failed at the ground usually mean a new line is the clearer job. We will say which one it is after we see the fence."),
-        ("What an estimate covers", "Length, height, style, gates, post method, access, and removal of any existing fence that has to come out. Call " + PHONE + " or use the form with the town and a rough foot count."),
-    ]
-    seo_html = "".join(f"<h2>{title}</h2>{paras([body] if isinstance(body, str) else body)}" for title, body in seo)
+    intro = s["intro"] if isinstance(s["intro"], list) else [s["intro"]]
+    intro_html = f'<p class="lede">{intro[0]}</p>' + paras(intro[1:])
     related = "".join(f'<li><a href="{href}">{label}</a></li>' for label, href in other_services(s["href"])[:4])
     towns = chips(place_links())
-    body = f"""<div class="crumb-bar"><div class="wrap">{crumbs([("Home", "/"), ("Services", "/services.html"), (s["nav"], None)])}</div></div>
-<section class="hero slim-hero service-hero">
-  <div class="wrap service-hero-inner">
-    <p class="eyebrow">{s["nav"]}</p>
-    <h1>{s["h1"]}</h1>
-    <p class="lede">{s["intro"]}</p>
-    {hero_buttons(estimate)}
-  </div>
-</section>
-<section class="section service-body">
-  <div class="wrap service-layout">
-    <div class="service-main">
-      {service_gallery(s, C.SERVICES)}
-      <div class="prose service-copy">
-        <h2>{s["when_h"]}</h2>
-        {paras(s["when"])}
-        {seo_html}
-        <h2>{s["process_h"]}</h2>
-        <p>{s["process_lead"]}</p>
-        {steps(s["steps"])}
-        <h2>{s["cost_h"]}</h2>
-        <p>{s["cost_lead"]}</p>
-        {factors(s["costs"])}
-        <h2>{s["faq_h"]}</h2>
-        {faq_block(s["faqs"])}
-      </div>
+
+    blocks = []
+    blocks.append(f"""<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>{s["styles_h"]}</h2>
+      <p>{s.get("styles_lead") or ""}</p>
     </div>
-    <aside class="service-aside" aria-label="Estimate and related services">
-      <div class="side-card" id="quote">
-        <p class="side-kicker">Talk through the line</p>
-        <p>Call or send the lot details. We will tell you if the job is a repair, a replacement, or a different material than you started with.</p>
-        <p class="side-phone">{phone_link("phone-link-lg")}</p>
-        <p class="side-hours">{OFFICE_HOURS}</p>
-        <p><a class="btn btn-solid" href="{estimate}">Estimate form</a></p>
-      </div>
+    {factors(s["styles"])}
+  </div>
+</section>""")
+
+    materials = s.get("materials") or []
+    if materials:
+        blocks.append(f"""<section class="section section-alt">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>{s["materials_h"]}</h2>
+    </div>
+    {factors(materials)}
+  </div>
+</section>""")
+
+    choosing = s.get("choosing") or []
+    if choosing:
+        blocks.append(f"""<section class="section section-alt">
+  <div class="wrap prose">
+    <h2>{s["choosing_h"]}</h2>
+    <p>{s.get("choosing_lead") or ""}</p>
+    {bullet_list(choosing)}
+    <p>{s.get("choosing_note") or ""}</p>
+  </div>
+</section>""")
+
+    benefits = s.get("benefits") or []
+    if benefits:
+        alt = "" if materials or choosing else " section-alt"
+        note = s.get("benefits_note") or ""
+        note_html = f"<p>{note}</p>" if note else ""
+        lead = s.get("benefits_lead") or ""
+        blocks.append(f"""<section class="section{alt}">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>{s["benefits_h"]}</h2>
+      <p>{lead}</p>
+    </div>
+    {factors(benefits)}
+    <div class="prose" style="margin-top:1.2rem">{note_html}</div>
+  </div>
+</section>""")
+
+    terrain = s.get("terrain") or []
+    if terrain:
+        blocks.append(f"""<section class="section">
+  <div class="wrap prose">
+    <h2>{s["terrain_h"]}</h2>
+    {paras(terrain)}
+  </div>
+</section>""")
+
+    planning = s.get("planning") or []
+    if planning:
+        blocks.append(f"""<section class="section">
+  <div class="wrap prose">
+    <h2>{s["planning_h"]}</h2>
+    {paras(planning)}
+  </div>
+</section>""")
+
+    repair = s.get("repair") or []
+    if repair:
+        blocks.append(f"""<section class="section section-alt">
+  <div class="wrap prose">
+    <h2>{s["repair_h"]}</h2>
+    {paras(repair)}
+  </div>
+</section>""")
+
+    blocks.append(f"""<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>{s.get("faq_h") or "Frequently Asked Questions"}</h2>
+    </div>
+    {faq_block(s["faqs"])}
+  </div>
+</section>""")
+
+    related_block = f"""<section class="section section-alt">
+  <div class="wrap service-layout">
+    <div>
+      <h2>Towns we serve</h2>
+      {towns}
+      <p><a class="details" href="/service-areas.html">Service area</a> · <a class="details" href="#quote">Request an estimate</a> · <a class="details" href="/services.html">All services</a></p>
+    </div>
+    <aside class="service-aside" aria-label="Related services">
       <div class="side-card side-card-muted">
         <p class="side-kicker">Related</p>
         <ul class="side-links">{related}</ul>
       </div>
     </aside>
   </div>
+</section>"""
+
+    cta_paras = s.get("cta") or []
+    cta_body = paras(cta_paras[:-1]) if len(cta_paras) > 1 else paras(cta_paras)
+    body = f"""<div class="crumb-bar"><div class="wrap">{crumbs([("Home", "/"), ("Services", "/services.html"), (s["nav"], None)])}</div></div>
+<section class="hero service-hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">{s["nav"]}</p>
+      <h1>{s["h1"]}</h1>
+      {intro_html}
+      {hero_buttons("#quote")}
+    </div>
+    <div class="quote-card" id="quote">
+      <p class="kicker">Free estimate</p>
+      <h2>Request a Free Estimate</h2>
+      {FORM}
+    </div>
+  </div>
 </section>
-<section class="section section-towns" style="padding-top:0">
-  <div class="wrap">
-    <h2>Towns we serve</h2>
-    {towns}
-    <p><a class="details" href="/service-areas.html">Service area</a> · <a class="details" href="{estimate}">Request an estimate</a> · <a class="details" href="/services.html">All services</a></p>
+{"".join(blocks)}
+{related_block}
+<section class="band">
+  <div class="wrap band-inner">
+    <div>
+      <h2>{s.get("cta_h") or "Request a Free Estimate"}</h2>
+      {cta_body}
+    </div>
+    <div class="band-panel">
+      <a class="band-phone" href="tel:{TEL}">{PHONE}</a>
+      <a class="btn btn-solid" href="#quote">Request Your Free Estimate Today</a>
+    </div>
   </div>
 </section>"""
     return {
@@ -664,7 +751,7 @@ def build_home():
 def build_services():
     articles = []
     for s in C.SERVICES:
-        articles.append(f'<article class="factor"><h3><a href="{s["href"]}">{s["nav"]}</a></h3><p>{s["fit"]}</p></article>')
+        articles.append(f'<article class="factor"><h3><a href="{s["href"]}">{s["nav"]}</a></h3><p>{s["card"]}</p></article>')
     body = f"""{page_hero(crumbs([("Home", "/"), ("Services", None)]), "Fence Services in Roanoke, VA", "Six kinds of fence work, each with its own page. Start with what the fence has to do. Privacy, a dog, a pool, livestock, and a commercial lot are not one product.", "/contact.html#quote")}
 <section class="section">
   <div class="wrap">

@@ -42,39 +42,92 @@ SERVICES = [
         "h": 619,
         "alt": "White vinyl privacy fence with scalloped tops along a lawn",
         "title": "Vinyl Fence Installation in Roanoke, VA",
-        "description": "Vinyl privacy, picket, and ranch-rail fence installation in Roanoke, VA. Low-upkeep fencing with a free on-site estimate. Call (540) 234-2867.",
-        "h1": "Vinyl Fencing in Roanoke, VA",
-        "intro": "Vinyl is the privacy or picket fence for a yard you do not want to stain. We install it on homes in Roanoke and the nearby towns, and we price it from the length, the style, and the gates.",
-        "fit": "Choose vinyl for a privacy or picket fence you do not want to stain. A typical privacy panel looks finished from both sides, which helps on a shared lot line.",
-        "when_h": "When vinyl is the right fence",
-        "when": [
-            "Choose vinyl when you want privacy or a picket line and you do not want a fence that needs stain. It is a common replacement for wood that has turned into a maintenance chore.",
-            "It is a weaker choice on a long farm boundary, where rail or wire costs less per foot, and when you want a fence you can repaint a new color every few years.",
+        "description": "Vinyl privacy, picket, semi-privacy, and ranch rail fence installation in Roanoke, VA. Call (540) 234-2867 for a free estimate.",
+        "h1": "Vinyl Fence Installation in Roanoke, VA",
+        "intro": [
+            "At Roanoke VA Fence Company, we offer vinyl fence installation for homeowners who want an attractive, durable, and low-maintenance fencing solution. Whether you're looking to create a private backyard, enhance your home's curb appeal, or establish clear property boundaries, vinyl fencing provides a practical alternative to traditional wood.",
+            "Available in several colors, heights, and styles, vinyl fences offer a clean, finished appearance without the need for regular painting or staining. Their versatility makes them a popular choice for residential properties throughout the area.",
         ],
-        "process_h": "How a vinyl install goes",
-        "process_lead": "The visit decides the style and the steps. The build itself is posts, panels, and gates.",
-        "steps": [
-            ("Name the style", "Privacy, picket, or ranch rail, plus the height and the color. Ranch rail is a two-, three-, or four-rail perimeter fence, not a screen."),
-            ("Walk the line", "We look at the slope, the gate openings, and whether panels need to step. A flat catalog panel will not follow a Roanoke hillside by itself."),
-            ("Price the whole run", "Footage, gates, and any wood fence that has to come out are on the estimate before we dig. There is no separate surprise for the layout after the holes are started."),
-            ("Set posts and hang panels", "Posts go in, panels go up, and gates get hung so they latch. We check the bottoms against the grade before we leave."),
+        "styles_h": "Vinyl Fence Styles & Options",
+        "styles_lead": "Vinyl fencing is available in multiple designs to accommodate different property layouts and preferences.",
+        "styles": [
+            (
+                "Vinyl Privacy Fencing",
+                "Enjoy greater privacy with solid vinyl fence panels designed to create a secluded outdoor space. Privacy fencing is especially popular around backyards, patios, and swimming pools.",
+            ),
+            (
+                "Vinyl Picket Fencing",
+                "Add a traditional, decorative appearance to your front yard or garden. Vinyl picket fences establish boundaries while maintaining an open, welcoming design.",
+            ),
+            (
+                "Semi-Privacy Vinyl Fencing",
+                "Semi-privacy fences allow limited visibility and airflow between panels while providing more screening than traditional picket fencing.",
+            ),
+            (
+                "Vinyl Ranch Rail Fencing",
+                "Ranch rail fencing is an attractive option for larger properties, driveways, and decorative boundaries. Its open design helps define property lines without obstructing surrounding views.",
+            ),
         ],
-        "cost_h": "What changes a vinyl price",
-        "cost_lead": "Vinyl usually costs more to install than a basic wood privacy fence. These are the items that move the number.",
-        "costs": [
-            ("Style and height", "A solid privacy panel, a picket, and a ranch rail do not use the same amount of material. Taller privacy costs more than a low picket."),
-            ("Gates", "Every gate is hardware, a post pair, and time. A wider gate costs more than a single walk gate."),
-            ("Slope and steps", "Stepped panels, extra posts, and cuts on a hill take longer than a level run of the same length."),
-            ("Tear-out and access", "Hauling off an old wood fence, or carrying panels through a narrow side yard, is labor the footage alone does not show."),
+        "benefits_h": "Why Choose Vinyl Fencing?",
+        "benefits_lead": "One of vinyl fencing's biggest advantages is its minimal maintenance requirements. Unlike wood, vinyl does not need periodic staining or sealing to protect the material.",
+        "benefits": [
+            (
+                "Low maintenance",
+                "Occasional cleaning is generally all that's required.",
+            ),
+            (
+                "Moisture resistance",
+                "Does not absorb water or rot like untreated wood.",
+            ),
+            (
+                "Attractive appearance",
+                "Available in various styles and colors.",
+            ),
+            (
+                "Privacy options",
+                "Solid panels create comfortable outdoor spaces.",
+            ),
+            (
+                "Long-term durability",
+                "Quality vinyl materials are designed to withstand normal outdoor exposure.",
+            ),
         ],
-        "faq_h": "Vinyl fence questions",
+        "benefits_note": "Although vinyl is durable, strong impacts and extreme weather can damage panels or posts. Proper installation and appropriate materials are important for long-term performance.",
+        "terrain_h": "Vinyl Fence Installation for Uneven Yards",
+        "terrain": [
+            "Sloped yards require additional planning, particularly when installing rigid vinyl fence panels. Depending on the terrain and selected fence system, panels may be stepped or designed to follow the slope. Careful placement helps minimize unnecessary gaps, maintain attractive fence lines, and ensure gates operate properly. Properties with significant elevation changes may require customized layouts.",
+        ],
+        "repair_h": "Vinyl Fence Replacement & Repairs",
+        "repair": [
+            "Vinyl fencing can sometimes be repaired by replacing individual panels, rails, pickets, or damaged components. However, extensive structural damage or problems involving multiple posts may make replacement more practical. If you're replacing an older wood fence, vinyl may be worth considering when reducing future maintenance is a priority.",
+        ],
+        "faq_h": "Frequently Asked Questions",
         "faqs": [
-            ("How much more does vinyl cost than wood?", "Vinyl usually costs more to install than a basic wood privacy fence of the same length. Wood stain and board repairs over the years are the costs vinyl is meant to avoid. The gap depends on the style, the gates, and how heavy the wood fence is. We price both from the same layout so you can compare one job."),
-            ("Does a vinyl privacy fence have a good side and a bad side?", "Many vinyl privacy panels look finished from both yards, with no exposed rail side. That helps when the fence sits on a shared line and neither neighbor wants the frame. Picket and ranch rail are open styles, so there is no solid face to assign. Ask which profile you are pricing."),
-            ("Do you install vinyl picket and ranch rail, or only privacy panels?", "We install privacy panels, picket, and ranch rail. Ranch rail comes in two, three, or four rails and does not screen the yard the way a privacy panel does. Picket is the open front-yard look, and privacy is the solid backyard fence. Name the style when you call so the estimate matches it."),
-            ("Does vinyl need to be painted?", "No. Vinyl is chosen because it does not take stain or paint the way wood does. Dirt can still be washed off, and a finish can scratch, but there is no yearly coating to keep the material sound. That is not a promise that the fence will never mark or fade."),
-            ("Can vinyl panels follow a sloped yard?", "Tall privacy panels usually step down a slope so each panel stays plumb. Forcing a flat panel to twist with the hill opens a gap at the bottom or racks the frame. The walk-through is where we decide how the steps land and where a gate can still swing. Slope is a price item, not a surprise after the holes are dug."),
-            ("When should I skip vinyl?", "Skip it on a long pasture, when you want to change the color with stain later, or when the job is a commercial chain-link spec. Vinyl is a yard fence. It is not the default for cattle, a storage yard, or a pool that needs an open view of the water."),
+            (
+                "Is vinyl fencing more expensive than wood?",
+                "Vinyl typically has a higher initial material cost than basic wood fencing. However, reduced staining, painting, and maintenance requirements may offset some of that difference over time.",
+            ),
+            (
+                "How long does vinyl fencing last?",
+                "Quality vinyl fencing can provide many years of service when properly installed and maintained. Actual lifespan depends on material quality, environmental conditions, and physical damage.",
+            ),
+            (
+                "Does vinyl fencing require maintenance?",
+                "Vinyl generally requires occasional washing to remove dirt, pollen, and mildew. It does not require the periodic staining or painting associated with wood fencing.",
+            ),
+            (
+                "Can vinyl fencing be installed on a slope?",
+                "Yes. Depending on the fence design and slope, stepped or rackable systems may be appropriate. The best approach depends on the property.",
+            ),
+            (
+                "What colors are available?",
+                "White and tan are common options, although additional colors and finishes may be available depending on the manufacturer and fencing system. Ask about current color choices when you request your estimate.",
+            ),
+        ],
+        "cta_h": "Request a Free Vinyl Fence Estimate",
+        "cta": [
+            "Interested in a fence that combines privacy, appearance, and easy maintenance? Contact Roanoke VA Fence Company to discuss vinyl fencing options for your home.",
+            "Call (540) 234-2867 or Request Your Free Estimate Today.",
         ],
     },
     {
@@ -86,39 +139,90 @@ SERVICES = [
         "h": 619,
         "alt": "Vertical-board wood privacy fence between square posts",
         "title": "Wood Fence Installation in Roanoke, VA",
-        "description": "Wood privacy, picket, and dog-ear fence installation and repair in Roanoke, VA. Layout and style set the price. Call (540) 234-2867.",
-        "h1": "Wood Fencing in Roanoke, VA",
-        "intro": "Wood is still the privacy fence most people picture: boards, posts, and a gate. We build privacy, board-on-board, dog-ear, picket, and horizontal board fences, and we repair runs whose posts are still sound.",
-        "fit": "Choose wood when you want privacy, picket, or dog-ear boards you can stain. Plan on upkeep, especially where the boards meet the soil.",
-        "when_h": "When a wood fence is the right job",
-        "when": [
-            "Choose wood when you want a fence you can stain to the house, or a picket or dog-ear line that fits an older yard. Board-on-board covers the rails better than a single-face privacy fence.",
-            "Wood is a weaker choice if nobody will maintain it. Virginia sun and rain gray bare boards, and rot at the soil line is what usually ends a neglected wood fence.",
+        "description": "Wood privacy, picket, and horizontal fence installation and repair in Roanoke, VA. Call (540) 234-2867 for a free estimate.",
+        "h1": "Wood Fence Installation in Roanoke, VA",
+        "intro": [
+            "At Roanoke VA Fence Company, we offer wood fence installation and repair services for homeowners looking to improve their property's privacy, security, and appearance. Whether you want a traditional backyard privacy fence, a decorative picket fence, or a modern horizontal design, wood fencing offers a versatile and attractive solution.",
+            "With several styles, heights, and finishes available, wood fences can be customized to complement your home and landscaping. From replacing an aging fence to enclosing a backyard for children or pets, we can help you find an option that suits your needs and budget.",
         ],
-        "process_h": "How a wood fence gets built",
-        "process_lead": "We ask for the footage first, then the layout, then the style. Those three items are the price.",
-        "steps": [
-            ("Pick the build", "Privacy, board-on-board, dog-ear, picket, or horizontal boards. Height and spacing are part of that choice, not a detail we guess."),
-            ("Check what is standing", "On a repair we test the posts. Solid posts can take new boards. Soft posts mean the repair will lean with them."),
-            ("Separate the extras", "Stain, height, gates, and tear-out are their own lines. A low number per foot that hides the gates is not a usable estimate."),
-            ("Hang the finished face", "We set or reuse posts, then boards, with the finished face on the side you chose. Gates get hung so they clear the grade."),
+        "styles_h": "Wood Fencing Styles for Your Property",
+        "styles_lead": "Wood fencing remains a popular choice because of its natural appearance, flexibility, and wide range of design options.",
+        "styles": [
+            (
+                "Wood Privacy Fencing",
+                "Create a more private and comfortable backyard with solid wood fencing. Privacy fences are ideal for outdoor entertaining, relaxing, and creating a secure space for children and pets.",
+            ),
+            (
+                "Board-on-Board Fencing",
+                "Board-on-board fences feature overlapping vertical boards that provide additional privacy by minimizing gaps between panels. This style offers a distinctive appearance and is especially attractive for residential properties.",
+            ),
+            (
+                "Wood Picket Fencing",
+                "A classic option for front yards, gardens, and decorative property boundaries. Picket fencing provides an inviting appearance while maintaining an open view.",
+            ),
+            (
+                "Horizontal Wood Fencing",
+                "Horizontal fences offer a clean, contemporary appearance that complements modern homes and outdoor living spaces. Board spacing and height can be customized to achieve your preferred level of privacy.",
+            ),
         ],
-        "cost_h": "What changes a wood fence price",
-        "cost_lead": "Length is the first question. Style and the ground are the next two.",
-        "costs": [
-            ("Footage", "A longer line uses more posts and boards. We need a rough measurement even if you have not pinned every corner."),
-            ("Style", "Picket, standard privacy, board-on-board, and horizontal boards do not consume the same lumber. The style is a price choice."),
-            ("Layout", "Level ground, a slope, trees, roots, and rocky soil change post holes and how the boards step."),
-            ("Access and gates", "A yard the truck cannot reach takes longer. Each gate, and any old fence we haul away, is added to the footage."),
+        "benefits_h": "Benefits of Installing a Wood Fence",
+        "benefits_lead": "Wood fencing provides several advantages for residential properties:",
+        "benefits": [
+            (
+                "Natural appearance",
+                "Complements traditional and modern homes.",
+            ),
+            (
+                "Customizable designs",
+                "Available in numerous heights, styles, and configurations.",
+            ),
+            (
+                "Privacy and security",
+                "Helps create a defined and enclosed outdoor space.",
+            ),
+            (
+                "Flexible finishes",
+                "Can be stained or painted to achieve your preferred appearance.",
+            ),
+            (
+                "Repairability",
+                "Individual boards and certain damaged sections can often be replaced.",
+            ),
         ],
-        "faq_h": "Wood fence questions",
+        "benefits_note": "Wood fencing does require periodic maintenance. Proper sealing, staining, and routine inspections can help protect against moisture damage, rot, and weathering.",
+        "terrain_h": "Wood Fence Installation on Sloped Properties",
+        "terrain": [
+            "Many properties throughout the Roanoke Valley feature uneven terrain, hills, and rocky soil. These conditions can affect fence layout, post placement, and overall installation costs.",
+            "Depending on the slope and design, wood fencing may be installed using stepped or contoured configurations. Choosing the right installation method helps maintain a consistent appearance while reducing excessive gaps along the bottom of the fence.",
+        ],
+        "repair_h": "Wood Fence Repair & Replacement",
+        "repair": [
+            "Not every damaged wood fence needs to be completely replaced. Common repair needs include broken boards, loose pickets, damaged gates, and deteriorating sections.",
+            "When the existing fence posts remain structurally sound, repairs may be a practical alternative to replacement. However, widespread wood rot, leaning posts, or extensive structural damage may require a new fence.",
+        ],
+        "faq_h": "Frequently Asked Questions",
         "faqs": [
-            ("How do you price a wood privacy fence?", "We start with the length, then the style, the height, and the gates. A dog-ear privacy line, a board-on-board line, and a picket fence are not the same amount of lumber. Slope, rocks, roots, and a narrow side yard change the labor. Tear-out of the old fence is its own line if it has to come down."),
-            ("What wood styles can you build?", "The styles we build are privacy, board-on-board, dog-ear, picket, and horizontal board. Height, board spacing, and the finished face change the look inside those styles. If you have a photo of a specific build, bring it to the estimate. We would rather match a picture than invent a style name."),
-            ("How does Virginia weather treat a wood fence?", "Sun and rain gray unfinished boards, and the soil line is where rot usually starts. A fence you stain, and keep out of standing water, lasts longer than one that is ignored. We will not put a year-count on a wood fence. Maintenance is part of owning it, which is why some people switch the next one to vinyl."),
-            ("Can you replace part of a wood fence?", "Yes, when the posts are still solid. Boards, a cap, or a gate can be replaced without rebuilding the whole run. If the posts are soft or the line leans for most of its length, new boards will follow that lean. We look at the posts before we call it a repair."),
-            ("Which face of a wood privacy fence looks finished?", "A standard privacy fence has a smooth board face and a rail face. Board-on-board hides the rails better from both sides. Tell us which direction the finished face should point before we hang boards. We build the side you specify."),
-            ("Is a picket fence enough if I want privacy?", "No. A picket fence is an open border. It marks the yard, but people can see through it. Privacy means solid or overlapping boards tall enough to screen the yard. If privacy is the goal, price a privacy style, not a picket."),
+            (
+                "How much does a wood fence cost?",
+                "Pricing depends on the fence length, height, lumber selection, design, gates, and installation conditions. Board-on-board and custom horizontal fences generally require more materials than basic privacy designs.",
+            ),
+            (
+                "How long does a wood fence last?",
+                "Lifespan depends on the wood species, installation quality, weather exposure, and maintenance. Regular staining or sealing and preventing prolonged contact with standing water can help extend its useful life.",
+            ),
+            (
+                "Can a wood fence be installed on a hill?",
+                "Yes. Wood fencing can be adapted to sloped yards using stepped or contoured installation methods, depending on the design and terrain.",
+            ),
+            (
+                "Is wood or vinyl fencing better?",
+                "Wood offers a natural appearance and greater flexibility for painting or staining. Vinyl typically requires less ongoing maintenance. The best choice depends on your budget, preferred appearance, and willingness to maintain the fence.",
+            ),
+        ],
+        "cta_h": "Get a Free Wood Fence Estimate",
+        "cta": [
+            "Ready to add privacy, security, and character to your property? Contact Roanoke VA Fence Company to discuss your fencing project and explore available wood fencing styles.",
+            "Call (540) 234-2867 or Request Your Free Estimate Today.",
         ],
     },
     {
@@ -129,40 +233,98 @@ SERVICES = [
         "w": 1100,
         "h": 619,
         "alt": "Galvanized chain-link fence beside a sidewalk",
-        "title": "Chain Link Fence Installation in Roanoke, VA",
-        "description": "Chain-link fence installation for homes, dogs, and commercial lots in Roanoke, VA. Galvanized or color-coated. Call (540) 234-2867.",
-        "h1": "Chain Link Fence in Roanoke, VA",
-        "intro": "Chain link is the practical enclosure: a yard, a dog run, a ball field, or a commercial lot. It does not pretend to be a privacy wall unless you add slats or a screen.",
-        "fit": "Choose chain link to enclose a yard, a dog, or a work lot without paying for a solid screen. Gates and the coating change the price more than the footage slogan does.",
-        "when_h": "When chain link is the right fence",
-        "when": [
-            "Choose it when you need a boundary that is sturdy and see-through, and when privacy is not the point. Homes use it for dogs and side yards. Businesses use a heavier version for lots and storage.",
-            "Skip bare chain link if the goal is to block a view. Slats or a windscreen can help, and they also catch wind. A wood or vinyl privacy fence is the direct way to screen a backyard.",
+        "title": "Chain-Link Fence Installation in Roanoke, VA",
+        "description": "Chain-link fence installation for homes, pet enclosures, and businesses in Roanoke, VA. Call (540) 234-2867 for a free estimate.",
+        "h1": "Chain-Link Fence Installation in Roanoke, VA",
+        "intro": [
+            "At Roanoke VA Fence Company, we provide chain-link fencing solutions for homeowners and businesses looking for an affordable, durable, and practical way to secure their properties. Whether you're enclosing a backyard, creating a safe outdoor space for your pets, or securing a commercial facility, chain-link fencing offers dependable protection without completely blocking visibility.",
+            "Available in multiple heights, finishes, and configurations, chain-link fencing can accommodate a variety of residential and commercial applications.",
         ],
-        "process_h": "How a chain-link install goes",
-        "process_lead": "Terminal posts and tension do the work. The fabric is only as good as those posts.",
-        "steps": [
-            ("Confirm the use", "Dog run, backyard, field, or commercial yard. The use picks the height and how heavy the pipe should be."),
-            ("Choose the fabric", "Galvanized silver, or a black or green coating. Powder coat is another finish on some products."),
-            ("Count the extras", "Gates, slats, and windscreen belong on the first estimate. They are not a small add-on after the fabric is stretched."),
-            ("Stretch and hang", "We set terminal posts, stretch the fabric, and hang gates so the gate is not what holds the tension in the line."),
+        "styles_h": "Residential & Commercial Chain-Link Fencing",
+        "styles_lead": "Chain-link fencing is a versatile option for properties where security, durability, and affordability are priorities.",
+        "styles": [
+            (
+                "Residential Chain-Link Fences",
+                "Chain-link fences are ideal for enclosing backyards, defining property boundaries, and creating designated play areas. They provide a secure barrier while maintaining visibility throughout your outdoor space.",
+            ),
+            (
+                "Dog Runs & Pet Enclosures",
+                "Create a designated outdoor area for your pets with chain-link fencing. Fence height, gate placement, and bottom clearance should be selected based on your pet's size, activity level, and tendency to dig or climb.",
+            ),
+            (
+                "Commercial Chain-Link Fencing",
+                "Businesses frequently use chain-link fencing to secure equipment, parking areas, storage facilities, and other commercial properties. Heavier framework, taller fencing, and specialized gates may be appropriate depending on the property's security requirements.",
+            ),
         ],
-        "cost_h": "What changes a chain-link price",
-        "cost_lead": "Length and gates are most of it. The ground and the finish are the rest.",
-        "costs": [
-            ("Length", "More fabric and more line posts. A long, open run is still simpler than a short run full of corners."),
-            ("Gates", "Each gate adds posts and hardware. A double drive gate is a different price from a walk gate."),
-            ("Coating and height", "Silver galvanized is the base. Black or green coating, and a taller fence, cost more."),
-            ("Layout", "Slope, rock, and a yard the truck cannot reach change the labor even when the fabric price looks simple."),
+        "materials_h": "Chain-Link Fence Materials & Finishes",
+        "materials": [
+            (
+                "Galvanized Chain-Link Fencing",
+                "Galvanized fencing features a protective zinc coating designed to resist corrosion. Its traditional silver finish makes it a practical choice for residential, commercial, and recreational properties.",
+            ),
+            (
+                "Black Vinyl-Coated Chain-Link Fencing",
+                "Black-coated chain-link fencing offers a more subtle appearance that blends naturally with surrounding landscaping. The protective coating also provides an additional barrier against moisture and environmental exposure.",
+            ),
+            (
+                "Privacy Slats & Gates",
+                "Privacy slats can reduce visibility through chain-link fencing, while walk-through and double-drive gates provide convenient property access. Slats and screening increase wind loading, so the fence framework must be suitable for the selected additions.",
+            ),
         ],
-        "faq_h": "Chain-link questions",
+        "benefits_h": "Benefits of Chain-Link Fencing",
+        "benefits_lead": "",
+        "benefits": [
+            (
+                "Affordability",
+                "Often less expensive than solid privacy fencing.",
+            ),
+            (
+                "Durability",
+                "Designed for everyday outdoor exposure.",
+            ),
+            (
+                "Low maintenance",
+                "Requires relatively little routine upkeep.",
+            ),
+            (
+                "Visibility",
+                "Allows unobstructed views through the fence.",
+            ),
+            (
+                "Versatility",
+                "Suitable for homes, businesses, recreational areas, and pet enclosures.",
+            ),
+        ],
+        "benefits_note": "",
+        "terrain_h": "",
+        "terrain": [],
+        "repair_h": "Chain-Link Fence Repairs & Replacement",
+        "repair": [
+            "Over time, chain-link fences may develop loose fabric, damaged posts, bent rails, or malfunctioning gates. Some issues can be corrected by replacing individual components or adjusting existing hardware. When multiple posts have shifted or extensive sections are damaged, replacement may provide a more reliable long-term solution.",
+        ],
+        "faq_h": "Frequently Asked Questions",
         "faqs": [
-            ("How does chain-link pricing work?", "Most of the price is the length of the fence and the number of gates. Height, a color coating, slats, and a windscreen add to that. The ground still matters: slope, rock, and access change the labor even on a simple fabric. We keep the estimate to those items instead of a single teaser rate."),
-            ("Can I get black or green chain link instead of galvanized silver?", "Yes. Standard fabric is zinc-coated steel, which reads as silver. Black or green usually means a polymer coating over that steel, and some products are powder coated instead. A thicker coating generally holds up longer than a thin one. We price the finish you actually want."),
-            ("Is chain link only for commercial property?", "No. It is a normal residential fence for a dog run, a side yard, or a backyard when you do not need privacy. It is also used on a commercial lot, a storage yard, or a ball field. The gauge, the height, and the fittings should match that use. A light backyard fence is not the spec we put on a commercial yard."),
-            ("Can you add a gate, privacy slats, or a windscreen?", "Yes. Gates are part of almost every chain-link job, and they move the price. Slats or a windscreen add screening that bare fabric does not have, and they also catch more wind. Say if you want them at the start. Adding them later means a second visit and hardware the first estimate did not include."),
-            ("Will chain link keep a dog in the yard?", "It can, if the height matches the dog and the bottom stays close to the ground. A determined digger will go under a fence that sits on soft soil. The gate latch matters as much as the fabric. Tell us the dog and we will price a height and a bottom that fit, without promising that every animal will stay put."),
-            ("What is different about commercial chain link?", "Commercial runs are usually taller, with heavier fittings, and the gates are built for trucks or steady foot traffic. Privacy screen or a barbed-wire top is a site spec, not the default on a house. We install those when the property calls for them. We do not put razor wire on a residential backyard."),
+            (
+                "How much does chain-link fence installation cost?",
+                "Pricing depends on fence length, height, wire gauge, coating, gate requirements, and installation conditions. Commercial-grade fencing generally costs more than lighter residential systems.",
+            ),
+            (
+                "Is chain-link fencing good for dogs?",
+                "Chain-link fencing can be an effective option for pet enclosures when properly sized and installed. Some dogs may require additional measures to discourage digging or climbing.",
+            ),
+            (
+                "Can chain-link fencing be installed on uneven ground?",
+                "Yes. Chain-link fencing can accommodate many sloped properties, although steep terrain may require adjustments to post spacing, fabric installation, and bottom clearance.",
+            ),
+            (
+                "Is black chain-link fencing more expensive?",
+                "Black vinyl-coated chain-link fencing typically costs more than standard galvanized fencing because of its additional finish. Standard galvanized fencing is the less expensive finish.",
+            ),
+        ],
+        "cta_h": "Get a Free Chain-Link Fence Estimate",
+        "cta": [
+            "Whether you're securing your backyard or commercial property, we can help you explore chain-link fencing options that fit your needs and budget.",
+            "Call (540) 234-2867 or Request Your Free Estimate Today.",
         ],
     },
     {
@@ -174,39 +336,84 @@ SERVICES = [
         "h": 274,
         "alt": "Black metal picket fence along a garden",
         "title": "Aluminum Fence Installation in Roanoke, VA",
-        "description": "Aluminum fence installation in Roanoke, VA, including open yard fences and pool enclosures. Call (540) 234-2867 for a free estimate.",
-        "h1": "Aluminum Fence in Roanoke, VA",
-        "intro": "Aluminum is the open fence: it marks the yard, keeps a view, and is the material we use most often around pools. It is not a privacy wall, and it can dent.",
-        "fit": "Choose aluminum when the fence should stay open, including around a pool. Sections can follow a slope more easily than a tall privacy panel.",
-        "when_h": "When aluminum is the right fence",
-        "when": [
-            "Choose aluminum when you want the space enclosed and the view left alone. Pool yards are the clearest case, because you can see the water and the metal does not rust the way steel does around chlorine.",
-            "Skip it when you need a solid screen, or where cars and mowers will hit a thin picket. A dent is the real downside of a light ornamental fence.",
+        "description": "Aluminum fence installation for homes, pools, and businesses in Roanoke, VA. Call (540) 234-2867 for a free estimate.",
+        "h1": "Aluminum Fence Installation in Roanoke, VA",
+        "intro": [
+            "At Roanoke VA Fence Company, we offer aluminum fence installation for property owners looking to combine security, durability, and an attractive appearance. Aluminum fencing provides the elegant look of traditional ornamental metal fencing without the ongoing maintenance associated with many older steel and iron designs.",
+            "Whether you're enhancing your front yard, enclosing a backyard, or adding a decorative boundary around your property, aluminum fencing offers a versatile solution that complements a wide range of architectural styles.",
         ],
-        "process_h": "How an aluminum install goes",
-        "process_lead": "The gate and the slope matter as much as the picket style.",
-        "steps": [
-            ("Name the job", "Pool, front yard, or a side line that should stay open. A pool fence is priced as a barrier, not as short decoration."),
-            ("Walk the slope", "Sections can rack down a hill. A gate still needs a swing that will not bind, so the gate spot is chosen on site."),
-            ("Pick the finish", "Black ornamental is the common request. The estimate says aluminum or steel, not a vague metal fence."),
-            ("Set and latch", "Posts, sections, and gates go in together. On a pool, the latch and the swing are part of the job."),
+        "styles_h": "Aluminum Fencing for Homes & Businesses",
+        "styles_lead": "Aluminum fences are particularly popular among homeowners who want to define their outdoor spaces without obstructing the surrounding landscape.",
+        "styles": [
+            (
+                "Residential Aluminum Fencing",
+                "Enhance your property's curb appeal with ornamental aluminum fencing. Available in various heights and decorative styles, aluminum fences are commonly installed around front yards, gardens, and residential property boundaries.",
+            ),
+            (
+                "Pool Fencing",
+                "Aluminum fencing is frequently used around swimming pools because it provides a secure enclosure while maintaining visibility. Pool barriers must meet applicable height, spacing, gate, and safety requirements. The appropriate fence design depends on local regulations and the property's layout.",
+            ),
+            (
+                "Decorative Aluminum Fencing",
+                "Ornamental aluminum fences can feature traditional pickets, decorative finials, and various rail configurations. These designs offer the appearance of classic wrought iron while requiring less maintenance.",
+            ),
         ],
-        "cost_h": "What changes an aluminum price",
-        "cost_lead": "Ornamental fence is often less upkeep than steel. It is not automatically the cheapest fence we install. Chain link usually wins that comparison.",
-        "costs": [
-            ("Style", "A simple picket and a taller ornamental profile do not cost the same. Finials and heavier rails add material."),
-            ("Pool hardware", "A pool gate and latch are specified differently from a garden gate. Say it is a pool on the first call."),
-            ("Grade", "Racking sections to a slope, or stepping them, changes posts and cuts. Steep spots take longer."),
-            ("Gates and dents", "Each opening is hardware. If vehicles swing into the line, we may tell you this profile is the wrong metal."),
+        "benefits_h": "Why Choose Aluminum Fencing?",
+        "benefits_lead": "Aluminum fencing is an attractive option for homeowners seeking long-term value and minimal upkeep.",
+        "benefits": [
+            (
+                "Rust resistance",
+                "Aluminum does not rust like untreated steel.",
+            ),
+            (
+                "Low maintenance",
+                "Typically requires little more than occasional cleaning.",
+            ),
+            (
+                "Attractive designs",
+                "Available in traditional and contemporary styles.",
+            ),
+            (
+                "Open visibility",
+                "Defines outdoor spaces without creating a solid visual barrier.",
+            ),
+            (
+                "Versatility",
+                "Suitable for front yards, gardens, pools, and property boundaries.",
+            ),
         ],
-        "faq_h": "Aluminum fence questions",
+        "benefits_note": "While aluminum is durable, it can bend or dent from significant impacts. Selecting an appropriate fence grade is important, especially for areas exposed to heavy activity.",
+        "terrain_h": "Aluminum Fencing on Sloped Properties",
+        "terrain": [
+            "Many aluminum fence systems feature rackable panels that can accommodate gradual changes in elevation. This flexibility makes aluminum an appealing option for properties with uneven terrain. Steeper slopes may require stepped installation, modified panel layouts, or additional planning to maintain suitable ground clearance.",
+        ],
+        "repair_h": "Aluminum Fence Gates & Repairs",
+        "repair": [
+            "Aluminum fence gates are available in various widths and designs to accommodate walkways, driveways, and enclosed outdoor spaces. Common repair concerns include damaged pickets, bent panels, loose hardware, and misaligned gates. Depending on the damage and fencing system, individual sections may be repairable or replaceable without removing the entire fence.",
+        ],
+        "faq_h": "Frequently Asked Questions",
         "faqs": [
-            ("Is aluminum a good fence around a pool?", "It is the fence we usually recommend for a pool because you can see through it and it does not rust the way steel does around water. A pool fence is also a barrier, so the gate, the latch, and the height have to suit the rules for that locality. Do not price it as a short decorative picket and hope it qualifies. Tell us it is a pool fence on the first call."),
-            ("Does aluminum rust?", "Aluminum does not rust the way untreated steel does. The finish can still scratch, and a deep dent is a real downside of a softer metal. It will not need the paint cycle of a steel fence. We will not say the surface can never chip or mark."),
-            ("Can an aluminum fence follow a hill?", "Yes. Sections can rack to follow a slope more easily than a tall privacy panel. A gate still needs a reasonably level swing, so the gate location is planned on the walk-through. Steep spots may step instead of rack. We agree on that look before we build."),
-            ("Why pick aluminum instead of a privacy fence?", "Pick it when you want the yard enclosed and the view left open. A privacy fence hides the neighbor and also blocks your own view from the house. Aluminum does the opposite. It is a poor choice when the point of the project is a solid screen."),
-            ("Can aluminum dent?", "Yes. That is the tradeoff for a light ornamental fence. A mower, a car door, or a fallen limb can crease a picket. If vehicles back into the line, say so before you choose a thin profile. Chain link or a heavier commercial spec may fit that spot better."),
-            ("Can you match a black ornamental look?", "Yes. Black ornamental aluminum is a common request, including an open picket with finials. It is the look people often mean when they say wrought iron, without the rust of actual iron. If the job should be steel, the estimate will say steel. It should not say a vague metal fence."),
+            (
+                "Is aluminum fencing better than wrought iron?",
+                "Aluminum is generally lighter and naturally resistant to rust, making it a lower-maintenance alternative. Wrought iron and steel fencing may offer greater strength in certain applications.",
+            ),
+            (
+                "How much does aluminum fence installation cost?",
+                "Costs vary based on fence height, style, material grade, gate selection, and property conditions. Ornamental designs and specialized gates can increase the price.",
+            ),
+            (
+                "Can aluminum fencing be used around pools?",
+                "Yes, provided the selected fencing system and installation meet applicable pool-barrier safety requirements. Pool barriers must meet applicable height, spacing, gate, and safety requirements.",
+            ),
+            (
+                "Does aluminum fencing provide privacy?",
+                "Most aluminum fences feature an open picket design rather than solid panels. Wood or vinyl privacy fencing may be more appropriate if blocking visibility is your main priority.",
+            ),
+        ],
+        "cta_h": "Request a Free Aluminum Fence Estimate",
+        "cta": [
+            "Interested in upgrading your property with elegant, low-maintenance fencing? Contact Roanoke VA Fence Company to discuss aluminum fence styles and installation options.",
+            "Call (540) 234-2867 or Request Your Free Estimate Today.",
         ],
     },
     {
@@ -217,40 +424,79 @@ SERVICES = [
         "w": 1100,
         "h": 619,
         "alt": "Weathered split-rail fence in a grassy field",
-        "title": "Farm Fencing in Roanoke, VA",
-        "description": "Farm, horse, cattle, and split-rail fencing around Roanoke, VA. Long runs priced by the line, the gates, and the ground. Call (540) 234-2867.",
-        "h1": "Farm Fencing in Roanoke, VA",
-        "intro": "Farm fence is a long line with a job: hold horses, hold cattle, or keep animals out of a crop. The product follows the animal. A backyard privacy panel is the wrong default.",
-        "fit": "Choose farm fence for horses, cattle, or a long property edge. The animal decides between rail, pipe and cable, wire, or electric.",
-        "when_h": "When the line should be farm fence",
-        "when": [
-            "Choose it for pastures and long edges where a privacy fence would be a wall nobody needs. Horses get a fence they can see, such as split rail or pipe and cable. Cattle are more often held with barbed wire or electric fence.",
-            "A wood farm fence in the open weathers faster than a privacy fence sheltered by a house. Some people want that aged look. Others should pick a product that can stay unfinished or already colored.",
+        "title": "Farm Fence Installation in Roanoke, VA",
+        "description": "Farm, horse, cattle, and split-rail fence installation in Roanoke, VA. Call (540) 234-2867 for a free estimate.",
+        "h1": "Farm Fence Installation in Roanoke, VA",
+        "intro": [
+            "At Roanoke VA Fence Company, we offer farm fencing solutions for agricultural properties, rural homes, and larger parcels of land. Whether you're defining pasture boundaries, enclosing livestock, or adding traditional split-rail fencing to your property, choosing the right fencing system is essential for functionality, durability, and long-term maintenance.",
+            "Farm fencing requirements vary depending on the animals being contained, the size of the property, and the surrounding terrain. We can help you explore practical options for your land and intended use.",
         ],
-        "process_h": "How a farm fence is planned",
-        "process_lead": "The animal, the gate, and the ground come before the style name.",
-        "steps": [
-            ("Name the animal", "Horses, cattle, or a field that has to keep animals out. Those are different fences, even if they look similar from the road."),
-            ("Walk the long line", "Wet spots, woods, rock, and the place a truck has to pass. A map is not a substitute for that walk."),
-            ("Match the product", "Split rail, pipe and cable, rail with mesh, barbed wire, or electric, based on what the fence has to hold."),
-            ("Build the gate for the traffic", "A farm gate has to clear a truck or a tractor. The hinge posts are sized for that leaf, not for a yard gate."),
+        "styles_h": "Farm & Agricultural Fencing Options",
+        "styles_lead": "Different agricultural properties require different types of fencing. The right choice depends on livestock, property layout, maintenance preferences, and budget.",
+        "styles": [
+            (
+                "Split-Rail Fencing",
+                "Split-rail fencing provides a traditional, rustic appearance that complements rural homes, driveways, and large properties. Its open design works well for decorative boundaries and landscape features. Additional wire mesh may be necessary when the fence is intended to contain animals.",
+            ),
+            (
+                "Horse Fencing",
+                "Horse fencing requires careful consideration of visibility, height, materials, and potential injury risks. Depending on the property, suitable options may include wood board fencing, properly designed polymer rail systems, and other horse-specific fencing products.",
+            ),
+            (
+                "Cattle & Livestock Fencing",
+                "Cattle fencing is designed to establish pasture boundaries and manage livestock movement. Common agricultural fencing systems include woven wire, suitable high-tensile wire configurations, and electric fencing where appropriate. Material strength, post spacing, gates, and terrain all affect the final design.",
+            ),
+            (
+                "Farm Gates & Property Entrances",
+                "Properly sized gates provide access for tractors, trailers, trucks, and other agricultural equipment. Gate width, hardware, and placement should accommodate the property's everyday operations.",
+            ),
         ],
-        "cost_h": "What changes a farm fence price",
-        "cost_lead": "On a long run the footage matters, and so do corners, braces, and whether the truck can drive the line.",
-        "costs": [
-            ("Length and corners", "More posts, more brace assemblies, and every change of direction. A straight field is cheaper to build than a line that jogs."),
-            ("The animal", "Horse rail, cattle wire, and a crop fence with mesh are different materials. The wrong one is not a small swap."),
-            ("Gates", "A wide equipment gate, with posts that can carry it, costs more than the field fence on either side."),
-            ("Ground and access", "Rock, wet ground, and woods slow the posts. A line the truck can drive goes faster than one we carry in."),
+        "choosing_h": "Choosing the Right Fence for Your Land",
+        "choosing_lead": "Farm fencing serves a different purpose from standard residential privacy fencing. Before selecting a system, consider:",
+        "choosing": [
+            "The type and number of animals.",
+            "Total fence length and pasture layout.",
+            "Terrain, soil conditions, and drainage.",
+            "Required vehicle and equipment access.",
+            "Long-term maintenance and repair costs.",
+            "Whether the fence is decorative, functional, or both.",
         ],
-        "faq_h": "Farm fence questions",
+        "choosing_note": "A system suitable for cattle may not be safe or effective for horses, goats, or smaller livestock.",
+        "benefits_h": "",
+        "benefits_lead": "",
+        "benefits": [],
+        "benefits_note": "",
+        "terrain_h": "Fencing for Hills, Fields & Rural Properties",
+        "terrain": [
+            "Rural properties throughout the Roanoke Valley often feature rolling hills, wooded areas, and uneven ground. These conditions can affect fence alignment, post placement, and installation methods. Long fence runs may also require additional considerations for corners, changes in direction, and structural support. Planning around the property's natural features can help create a more practical and maintainable fencing layout.",
+        ],
+        "repair_h": "Farm Fence Repair & Replacement",
+        "repair": [
+            "Agricultural fences experience wear from livestock pressure, weather exposure, falling branches, and regular property use. Damaged rails, loose wire, deteriorating posts, and broken gates should be addressed before they create containment or safety problems. Depending on the condition of the existing fence, targeted repairs may be sufficient. Extensive structural deterioration may require replacing larger sections.",
+        ],
+        "faq_h": "Frequently Asked Questions",
         "faqs": [
-            ("What fence should I use for horses?", "Horses need a fence they can see, so they are less likely to run through it or catch a leg. Split rail and pipe-and-cable are the horse options we install. Barbed wire is a poor horse fence. Tell us the horses are there before we price a cattle fence onto a horse pasture."),
-            ("What fence should I use for cattle?", "Cattle are often held with barbed wire or electric fence, which is a different build from a horse rail. A crop field that needs animals kept out is different again, and a rail with mesh is a common choice there. We need to know whether the fence is holding animals in or keeping them out. Those are not the same products."),
-            ("How do you price a long farm run?", "Length dominates, then corners, gates, and how hard the line is to reach. A straight run the truck can drive is simpler than a line through woods, wet ground, or rock. Brace posts and a farm gate wide enough for equipment are separate from the field fence. We walk it before we give a number."),
-            ("Will a farm fence need more upkeep than a backyard fence?", "Often, yes, because it stands in the open. A wood farm fence weathers faster than a privacy fence partly sheltered by a house and trees. Some owners want that silvered look. Others should choose a colored product or a wood that can stay the color it is. An open line in Virginia weather asks for more attention than a shaded yard fence."),
-            ("Can you put in a gate wide enough for a tractor or a truck?", "Yes. A farm gate is part of the plan, not a walk gate stretched wider. Tell us what has to pass and from which side it should swing, or whether it should slide. The hinge posts have to be built for that weight. A light line post will not carry a heavy gate."),
-            ("Can you fence a pasture that is not level?", "Yes. Farm lines on rolling ground are normal around Roanoke. The fence follows the grade, and low spots are where animals find a gap if the bottom is left high. We look for those spots on the walk. Rock and wet ground change how the posts go in, and they belong on the estimate."),
+            (
+                "What is the best fencing for a farm?",
+                "The best fencing system depends on the animals, property size, terrain, and intended purpose. Horse fencing, cattle fencing, and decorative split-rail fencing have different design requirements.",
+            ),
+            (
+                "How much does farm fencing cost?",
+                "Pricing depends on total length, materials, post spacing, terrain, gates, and the level of containment required. Longer fence runs and difficult ground conditions can significantly affect installation costs.",
+            ),
+            (
+                "Can farm fencing be installed on hills?",
+                "Yes. Many agricultural fencing systems can accommodate uneven terrain, although steep slopes require careful planning and appropriate post placement.",
+            ),
+            (
+                "Is split-rail fencing suitable for livestock?",
+                "Basic split-rail fencing is often used for decorative boundaries. Livestock containment may require additional mesh, different rail configurations, or a purpose-built agricultural fencing system.",
+            ),
+        ],
+        "cta_h": "Get a Free Farm Fencing Estimate",
+        "cta": [
+            "Whether you're enclosing pastureland, improving an existing agricultural fence, or adding a decorative boundary to your rural property, we're here to help you explore your options.",
+            "Call (540) 234-2867 or Request Your Free Estimate Today.",
         ],
     },
     {
@@ -261,40 +507,95 @@ SERVICES = [
         "w": 542,
         "h": 305,
         "alt": "Black ornamental metal fence with pointed finials beside a hedge",
-        "title": "Commercial Fencing in Roanoke, VA",
-        "description": "Commercial chain-link, ornamental metal, and gate installation in Roanoke, VA. Parking lots, yards, and job sites. Call (540) 234-2867.",
-        "h1": "Commercial Fencing in Roanoke, VA",
-        "intro": "A commercial fence closes a lot, a storage yard, or a job site, and the gates have to work for the traffic. We install chain link, ornamental aluminum or steel, and swing or sliding gates.",
-        "fit": "Choose a commercial build for a lot, a yard, or a gate that trucks use. The pipe, the height, and the hardware are specified apart from a backyard fence.",
-        "when_h": "When the job is commercial",
-        "when": [
-            "Use this page if the fence is for a business, a parking area, a yard, or a site that needs a gate a truck can clear. Ornamental metal fits a frontage that should stay open. Chain link fits security and storage.",
-            "Barbed wire or a razor top belongs on a commercial security spec only. We do not treat that hardware as a house option. Privacy screen is available on chain link when the lot needs to block a view.",
+        "title": "Commercial Fence Installation in Roanoke, VA",
+        "description": "Commercial chain-link, ornamental metal, security fencing, and gates in Roanoke, VA. Call (540) 234-2867 for a free estimate.",
+        "h1": "Commercial Fence Installation in Roanoke, VA",
+        "intro": [
+            "At Roanoke VA Fence Company, we offer commercial fencing solutions for businesses, property managers, and industrial facilities looking to improve security, control access, and define property boundaries. From securing storage yards and equipment areas to installing perimeter fencing around commercial buildings, the right fencing system helps protect valuable assets while maintaining an organized, professional appearance.",
+            "Commercial properties have different requirements than residential yards. Fence height, material strength, gate access, and site conditions should all be considered when planning an installation.",
         ],
-        "process_h": "How a commercial job is scoped",
-        "process_lead": "We price the use and the gates, then the footage.",
-        "steps": [
-            ("Start from the site", "Parking lot, storage yard, job site, or a frontage that should stay visible. The use picks the material."),
-            ("Match the spec", "Height, coating, privacy screen, and a barbed top only if the site calls for it. The estimate names each of those."),
-            ("Plan the openings", "People and trucks do not share one gate. A sliding gate is the usual answer when a swing leaf would block the drive."),
-            ("Walk it when it is up", "We check gaps, latches, and anything left in the way of traffic before we call the line finished."),
+        "styles_h": "Commercial Fencing Solutions for Your Business",
+        "styles_lead": "We offer several fencing options to accommodate different commercial applications and security needs.",
+        "styles": [
+            (
+                "Commercial Chain-Link Fencing",
+                "Chain-link fencing is a popular choice for warehouses, storage yards, industrial properties, and other commercial facilities. Available in various heights and material specifications, commercial chain-link fencing provides a practical perimeter barrier while allowing visibility throughout the property.",
+            ),
+            (
+                "Ornamental Metal Fencing",
+                "Ornamental aluminum and steel fencing offer an attractive alternative for office buildings, apartment communities, retail properties, and commercial entrances. These systems help establish property boundaries while maintaining a professional appearance.",
+            ),
+            (
+                "Security & Perimeter Fencing",
+                "Security fencing can help discourage unauthorized access to restricted areas, equipment storage locations, and commercial facilities. Depending on the property, additional considerations may include taller fencing, specialized gates, reinforced materials, and compatible access-control systems.",
+            ),
+            (
+                "Commercial Gates & Access Points",
+                "Proper gate placement allows employees, customers, delivery vehicles, and maintenance equipment to enter and exit safely. Pedestrian gates, double-drive gates, and other commercial gate configurations can be selected based on traffic patterns and access requirements.",
+            ),
         ],
-        "cost_h": "What changes a commercial price",
-        "cost_lead": "A commercial foot is not a backyard foot. Hardware and openings move the number.",
-        "costs": [
-            ("Height and weight", "Taller fence and heavier pipe cost more than a light residential chain-link line of the same length."),
-            ("Gates", "Swing, double drive, and sliding gates are different builds. The clear opening width is the number we need."),
-            ("Screen or security top", "Windscreen, privacy slats, and a barbed or razor top are add-ons with their own hardware. They are not assumed."),
-            ("Access and schedule", "A lot that has to stay partly open takes more coordination. That time belongs on the estimate, not after the crew arrives."),
+        "benefits_h": "Benefits of Commercial Fence Installation",
+        "benefits_lead": "A properly selected commercial fencing system can offer several advantages:",
+        "benefits": [
+            (
+                "Property security",
+                "Helps establish controlled boundaries around valuable assets.",
+            ),
+            (
+                "Access management",
+                "Directs vehicle and pedestrian movement through designated entrances.",
+            ),
+            (
+                "Clear property boundaries",
+                "Defines restricted, operational, and public areas.",
+            ),
+            (
+                "Professional appearance",
+                "Complements the property's overall design.",
+            ),
+            (
+                "Durability",
+                "Commercial-grade materials can accommodate demanding environments.",
+            ),
         ],
-        "faq_h": "Commercial fence questions",
+        "benefits_note": "The appropriate fencing system depends on the property's specific security requirements and daily operations.",
+        "planning_h": "Commercial Fence Planning & Installation",
+        "planning": [
+            "Commercial projects require careful planning to avoid interfering with business operations. Important considerations include property boundaries, underground utilities, vehicle access, drainage, existing pavement, and installation scheduling. Properties with uneven terrain or extensive fence lines may require additional groundwork and specialized installation methods. Local zoning, permit requirements, and applicable safety regulations should also be reviewed before installation.",
+        ],
+        "terrain_h": "",
+        "terrain": [],
+        "repair_h": "Commercial Fence Repair & Replacement",
+        "repair": [
+            "Damaged commercial fencing can compromise property security and create unnecessary maintenance concerns. Common repair needs include bent posts, damaged chain-link fabric, loose gates, broken hardware, and deteriorating fence sections. Minor damage may be addressed through individual component replacement. More extensive structural problems may require larger repairs or complete replacement.",
+        ],
+        "faq_h": "Frequently Asked Questions",
         "faqs": [
-            ("What do you install on a commercial property?", "Chain link, ornamental aluminum or steel, and gates. Privacy screen and windscreen go on chain link when the site needs to block a view. Barbed wire or a razor top is only for a commercial security spec, not for a house. The estimate names the material instead of calling all of it iron."),
-            ("Can you fence a parking lot or a storage yard?", "Yes. Those jobs are about the opening as much as the fence: where cars stack, where a truck turns, and which gate has to stay clear. A swing gate that blocks the drive is the wrong hardware. A sliding gate is the usual fix when the apron is short. We need that detail before we price the posts."),
-            ("How is commercial chain link different from a backyard fence?", "The commercial line is usually taller, with heavier pipe and fittings, and the gates take more traffic. A residential chain-link fence can be lighter because it is closing a yard, not a lot that trucks use. Using the house spec on a commercial yard is how a fence gets loose at the gates. We price the use, not just the footage."),
-            ("Do you install driveway and sliding gates?", "Yes. We install walk gates, driveway swing gates, and sliding gates. A sliding gate is the right hardware when a swing leaf would hit a parked car or block the lane. The opening width decides the post and the track, and that is a large part of the price. Measure the clear opening as best you can before the visit."),
-            ("How should a property manager plan the work?", "Tell us when the lot can be partly closed and which entrance has to stay open. The schedule depends on the job in front of yours, so we will not promise a standing day of the week on this site. We will say when the crew is coming and what has to be moved before we dig. A person who can answer questions on site matters as much as the material."),
-            ("Can you match an ornamental look on a storefront?", "Yes. A black ornamental fence is a common frontage when chain link would look like the back of the property. It does not hide the building. If you need a screen, that is privacy fence or chain link with a screen, and it is a different product. Say whether people should see through the line or whether the lot should be hidden."),
+            (
+                "What type of fencing is best for commercial properties?",
+                "Chain-link fencing is commonly used for practical perimeter security, while ornamental metal fencing is popular where appearance matters. The right option depends on the property's security requirements, budget, and intended use.",
+            ),
+            (
+                "How much does commercial fence installation cost?",
+                "Commercial fencing costs vary based on fence length, height, material specifications, gate systems, terrain, and installation complexity. Security requirements can also influence pricing.",
+            ),
+            (
+                "Can commercial fencing be installed around an operating business?",
+                "In many cases, installation can be planned in stages to reduce disruptions. Scheduling and access requirements should be discussed before work begins.",
+            ),
+            (
+                "Do commercial fences require permits?",
+                "Permit and zoning requirements depend on the property's location, fence height, placement, and intended use. Applicable regulations should be confirmed with the local authority.",
+            ),
+            (
+                "Can damaged commercial fencing be repaired?",
+                "Many commercial fencing systems allow individual posts, panels, fabric sections, or gates to be repaired or replaced. The best approach depends on the extent of the damage.",
+            ),
+        ],
+        "cta_h": "Request a Free Commercial Fence Estimate",
+        "cta": [
+            "Protect your property and improve access control with fencing suited to your business's needs. Contact Roanoke VA Fence Company to discuss your commercial fencing project and available installation options.",
+            "Call (540) 234-2867 or Request Your Free Estimate Today.",
         ],
     },
 ]
